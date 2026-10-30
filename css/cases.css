@@ -1,0 +1,93 @@
+/* ==========================================================================
+   PERSONALIZACIÓN DE MARCA POR CASO
+   Adapta los colores, sellos y marcos a la identidad visual de cada negocio
+   ========================================================================== */
+
+/* CASO A: TUESTE (Café de Especialidad DTC) */
+.brand-theme-tueste {
+  --brand-primary: #2a160d;
+  --brand-secondary: #5e321e;
+  --brand-accent: #c46d6d;
+  --brand-highlight: #d89f66;
+  --brand-surface: #fbf7f4;
+}
+
+.brand-theme-tueste .case-ribbon-tag {
+  background: #3c1e11;
+  color: #faede6;
+  border: 1px solid #d89f66;
+}
+
+.brand-theme-tueste .ornate-card {
+  border-color: rgba(94, 50, 30, 0.22);
+}
+
+.brand-theme-tueste .metric-value {
+  color: #2a160d;
+}
+
+/* CASO B: AGENDO (SaaS B2B Barberías y Salones) */
+.brand-theme-agendo {
+  --brand-primary: #111d28;
+  --brand-secondary: #1e354a;
+  --brand-accent: #c97d8b;
+  --brand-highlight: #6fa0c4;
+  --brand-surface: #f4f7f9;
+}
+
+.brand-theme-agendo .case-ribbon-tag {
+  background: #111d28;
+  color: #e9f2f8;
+  border: 1px solid #6fa0c4;
+}
+
+.brand-theme-agendo .ornate-card {
+  border-color: rgba(30, 53, 74, 0.2);
+}
+
+.brand-theme-agendo .metric-value {
+  color: #111d28;
+}
+
+.brand-theme-agendo .ornate-slider::-webkit-slider-thumb {
+  background: #1e354a;
+  border-color: #6fa0c4;
+}
+
+/* CASO C: SOL DE CASA (Lead Gen Paneles Solares) */
+.brand-theme-soldecasa {
+  --brand-primary: #15271e;
+  --brand-secondary: #274c3a;
+  --brand-accent: #d9822b;
+  --brand-highlight: #d4a017;
+  --brand-surface: #f4f8f5;
+}
+
+.brand-theme-soldecasa .case-ribbon-tag {
+  background: #15271e;
+  color: #edf7f1;
+  border: 1px solid #d4a017;
+}
+
+.brand-theme-soldecasa .ornate-card {
+  border-color: rgba(39, 76, 58, 0.22);
+}
+
+.brand-theme-soldecasa .metric-value {
+  color: #15271e;
+}
+
+.brand-theme-soldecasa .ornate-slider::-webkit-slider-thumb {
+  background: #274c3a;
+  border-color: #d4a017;
+}
+
+/* Tarjeta de Resumen Transversal */
+.executive-summary-card {
+  background: linear-gradient(135deg, #ffffff 0%, #faf5ef 100%);
+  border: 2px solid var(--color-gilded-gold);
+  border-radius: var(--radius-ornate);
+  padding: 2.25rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 12px 32px rgba(59, 34, 22, 0.08);
+}
