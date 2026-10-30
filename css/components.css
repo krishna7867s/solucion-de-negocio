@@ -1,270 +1,471 @@
 /* ==========================================================================
-   COMPONENTES INTERACTIVOS ARTESANALES
-   Controles deslizantes, interruptores, gráficos y contenedores de auditoría
+   COMPONENTES INTERACTIVOS PLANOS (ESTILO CANVA SIN SOMBRAS)
    ========================================================================== */
 
-/* Controles Deslizantes (Sliders) Hechos a Mano */
-.control-panel {
-  background: #ffffff;
-  border: 1px solid var(--color-border-lace);
-  border-radius: var(--radius-subtle);
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: var(--shadow-embossed);
+.inner-subtabs {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.65rem;
+  border-bottom: 1.5px solid var(--coq-pink-border);
+  padding-bottom: 0.4rem;
 }
 
-.control-group {
-  margin-bottom: 1.25rem;
+.subtab-pill {
+  background: var(--coq-pink-light);
+  color: var(--coq-choco-deep);
+  border: 1.5px solid var(--coq-choco-bar);
+  border-radius: 6px;
+  padding: 0.28rem 0.72rem;
+  font-family: var(--font-editorial);
+  font-weight: 700;
+  font-size: 0.86rem;
+  cursor: pointer;
 }
 
-.control-group:last-child {
-  margin-bottom: 0;
+.subtab-pill:hover {
+  background: var(--coq-pink-bg);
 }
 
-.control-label-row {
+.subtab-pill.active {
+  background: var(--coq-plaque);
+  color: var(--coq-white);
+  border-color: var(--coq-black);
+}
+
+.subtab-pane {
+  display: none;
+}
+
+.subtab-pane.active {
+  display: block;
+}
+
+/* Tarjetas informativas planas */
+.coq-info-card {
+  background: var(--coq-white);
+  border: 1.5px solid var(--coq-choco-bar);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  position: relative;
+}
+
+.coq-info-card.brown-cameo {
+  background: var(--coq-pink-light);
+  border: 2px solid var(--coq-brown-frame);
+}
+
+.coq-info-card.trap-highlight {
+  background: #fff6f9;
+  border: 1.5px solid var(--coq-choco-bar);
+  border-left: 5px solid var(--coq-choco-bar);
+}
+
+.coq-info-card h3,
+.coq-info-card h4 {
+  font-family: var(--font-editorial);
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--coq-choco-deep);
+  margin-bottom: 0.3rem;
+}
+
+.coq-info-card p,
+.coq-info-card li {
+  font-size: 0.82rem;
+  color: #36221b;
+  line-height: 1.45;
+}
+
+.coq-info-card ul,
+.coq-info-card ol {
+  padding-left: 1.15rem;
+  margin-top: 0.25rem;
+}
+
+/* Controles deslizantes planos */
+.sliders-box {
+  background: var(--coq-pink-light);
+  border: 1.5px solid var(--coq-choco-bar);
+  border-radius: 10px;
+  padding: 0.8rem 0.9rem;
+}
+
+.sliders-grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem 0.65rem;
+}
+
+.slider-item {
+  background: var(--coq-white);
+  border: 1px solid var(--coq-pink-border);
+  border-radius: 6px;
+  padding: 0.38rem 0.55rem;
+}
+
+.slider-item.full-span {
+  grid-column: 1 / -1;
+}
+
+.slider-top-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.18rem;
+  gap: 0.3rem;
 }
 
-.control-label {
-  font-family: var(--font-sans);
-  font-size: 0.88rem;
+.slider-name {
+  font-size: 0.73rem;
   font-weight: 600;
-  color: var(--color-chocolate-deep);
+  color: var(--coq-choco-deep);
 }
 
-.control-value-badge {
-  font-family: var(--font-serif);
-  font-size: 0.95rem;
+.slider-val-pill {
+  font-family: var(--font-editorial);
   font-weight: 700;
-  background: var(--color-rose-blush);
-  color: var(--color-chocolate-rich);
-  padding: 0.15rem 0.65rem;
-  border-radius: 6px;
-  border: 1px solid var(--color-rose-coquette);
+  font-size: 0.84rem;
+  background: var(--coq-plaque);
+  color: var(--coq-pink-bg);
+  padding: 0.04rem 0.42rem;
+  border-radius: 4px;
 }
 
-.ornate-slider {
+.coq-range {
   width: 100%;
-  height: 8px;
-  border-radius: 4px;
-  background: #eadecd;
+  height: 6px;
+  border-radius: 3px;
+  background: #e2b4c8;
   outline: none;
   -webkit-appearance: none;
   cursor: pointer;
-  transition: background 0.2s;
 }
 
-.ornate-slider::-webkit-slider-thumb {
+.coq-range::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 22px;
-  height: 22px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
-  background: var(--color-chocolate-rich);
-  border: 2px solid var(--color-gilded-gold);
-  box-shadow: 0 2px 6px rgba(59, 34, 22, 0.35);
+  background: var(--coq-choco-bar);
+  border: 2px solid var(--coq-pink-bg);
   cursor: pointer;
-  transition: transform 0.15s ease;
 }
 
-.ornate-slider::-webkit-slider-thumb:hover {
-  transform: scale(1.18);
-  background: var(--color-chocolate-deep);
-}
-
-/* Botones de Acción Editorial */
-.btn-ornate {
-  background: linear-gradient(180deg, var(--color-chocolate-rich) 0%, var(--color-chocolate-deep) 100%);
-  color: #fff9f5;
-  border: 1px solid var(--color-gilded-gold);
-  border-radius: 8px;
-  padding: 0.65rem 1.25rem;
-  font-family: var(--font-serif);
-  font-size: 0.9rem;
-  font-weight: 600;
+.btn-coq-reset {
+  background: var(--coq-plaque);
+  color: var(--coq-pink-light);
+  border: 1.5px solid var(--coq-black);
+  border-radius: 6px;
+  padding: 0.35rem 0.8rem;
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 0.88rem;
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  box-shadow: 0 4px 10px rgba(59, 34, 22, 0.18);
-  transition: all 0.2s ease;
 }
 
-.btn-ornate:hover {
-  background: var(--color-chocolate-deep);
-  transform: translateY(-1px);
-  box-shadow: 0 6px 14px rgba(59, 34, 22, 0.25);
+.btn-coq-reset:hover {
+  background: var(--coq-choco-bar);
+  color: var(--coq-white);
 }
 
-.btn-ornate-secondary {
-  background: #ffffff;
-  color: var(--color-chocolate-rich);
-  border: 1.5px solid var(--color-border-lace);
-  border-radius: 8px;
-  padding: 0.65rem 1.25rem;
-  font-family: var(--font-serif);
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: all 0.2s ease;
+/* Marcos de gráficos planos */
+.charts-grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
 }
 
-.btn-ornate-secondary:hover {
-  background: var(--color-rose-blush);
-  border-color: var(--color-rose-accent);
+.chart-frame {
+  background: var(--coq-white);
+  border: 1.5px solid var(--coq-choco-bar);
+  border-radius: 10px;
+  padding: 0.6rem 0.75rem;
 }
 
-/* Selector de Planes para el Nivel 3 */
-.plan-pill-selector {
+.chart-frame-head {
   display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.3rem;
   gap: 0.5rem;
-  margin-bottom: 1.5rem;
+}
+
+.chart-frame-title {
+  font-family: var(--font-editorial);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--coq-choco-deep);
+}
+
+.chart-frame-sub {
+  font-size: 0.71rem;
+  color: var(--coq-brown-frame);
+}
+
+.canvas-box-sm {
+  position: relative;
+  width: 100%;
+  height: 175px;
+}
+
+.canvas-box-lg {
+  position: relative;
+  width: 100%;
+  height: 255px;
+}
+
+/* ==========================================================================
+   EVALUADOR DE INVERSIÓN EN TIEMPO REAL (PLANO ESTILO ETIQUETA COQUETTE)
+   ========================================================================== */
+.realtime-investor-bar {
+  background: var(--coq-plaque);
+  color: var(--coq-white);
+  border: 2px solid var(--coq-black);
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+
+.realtime-investor-bar::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border: 1px dashed rgba(248, 212, 228, 0.45);
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.rt-controls-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.rt-input-group {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
   flex-wrap: wrap;
 }
 
-.plan-pill-btn {
-  background: #ffffff;
-  border: 1px solid var(--color-border-lace);
-  padding: 0.55rem 1.1rem;
-  border-radius: 6px;
-  font-family: var(--font-sans);
-  font-size: 0.85rem;
+.rt-input-label {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--coq-pink-bg);
   font-weight: 600;
-  color: var(--color-text-secondary);
-  cursor: pointer;
-  transition: all 0.2s ease;
 }
 
-.plan-pill-btn:hover {
-  background: var(--color-surface-card);
-  border-color: var(--color-chocolate-rich);
-}
-
-.plan-pill-btn.active {
-  background: var(--color-chocolate-rich);
-  color: #ffffff;
-  border-color: var(--color-chocolate-deep);
-  box-shadow: 0 2px 6px rgba(59, 34, 22, 0.2);
-}
-
-/* Contenedores de Gráficos con Marco de Galería */
-.chart-gallery-card {
-  background: #ffffff;
-  border: 1px solid var(--color-border-lace);
-  border-radius: var(--radius-subtle);
-  padding: 1.5rem;
-  box-shadow: var(--shadow-embossed);
-  position: relative;
-}
-
-.chart-header {
-  margin-bottom: 1rem;
-}
-
-.chart-title {
-  font-family: var(--font-serif);
-  font-size: 1.15rem;
-  color: var(--color-chocolate-deep);
-  font-weight: 700;
-}
-
-.chart-subtitle {
-  font-size: 0.82rem;
-  color: var(--color-text-muted);
-}
-
-.chart-canvas-wrapper {
-  position: relative;
-  width: 100%;
-  height: 280px;
-}
-
-.chart-canvas-wrapper.large-wrapper {
-  height: 360px;
-}
-
-/* Indicadores de Nivel (Nivel 1, Nivel 2, Nivel 3) */
-.level-badge {
+.rt-money-field {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  font-family: var(--font-display);
-  font-size: 0.75rem;
+  background: var(--coq-white);
+  border: 1.5px solid var(--coq-pink-border);
+  border-radius: 6px;
+  padding: 0.15rem 0.5rem;
+}
+
+.rt-money-field span {
+  font-family: var(--font-editorial);
   font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 0.3rem 0.8rem;
-  border-radius: 4px;
-  border: 1px solid;
+  font-size: 1.05rem;
+  color: var(--coq-choco-deep);
+  margin-right: 0.18rem;
 }
 
-.level-badge.level-1 {
-  background: #fbf5ed;
-  color: #8c5b23;
-  border-color: #d8b284;
+.rt-number-input {
+  width: 88px;
+  border: none;
+  outline: none;
+  font-family: var(--font-editorial);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--coq-choco-deep);
+  background: transparent;
 }
 
-.level-badge.level-2 {
-  background: #f4ecf7;
-  color: #632d75;
-  border-color: #be8ad3;
+.rt-slider-inline {
+  width: 135px;
 }
 
-.level-badge.level-3 {
-  background: #eef6f3;
-  color: #17654a;
-  border-color: #79baa0;
+.rt-toggles-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
-/* Tarjeta de Fila Verificada a Mano */
-.hand-verified-card {
-  background: #faf7f2;
-  border: 1.5px dashed var(--color-gilded-gold);
-  border-radius: var(--radius-subtle);
-  padding: 1.5rem;
-  margin: 1.5rem 0;
+.rt-check-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32rem;
+  background: #2f282c;
+  border: 1px solid rgba(248, 212, 228, 0.5);
+  border-radius: 6px;
+  padding: 0.24rem 0.6rem;
+  font-size: 0.75rem;
+  color: var(--coq-pink-light);
+  cursor: pointer;
+  user-select: none;
+}
+
+.rt-check-chip input {
+  accent-color: var(--coq-pink-deep);
+  cursor: pointer;
+}
+
+.preset-plans-row {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  margin-top: 0.6rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(248, 212, 228, 0.22);
   position: relative;
+  z-index: 1;
 }
 
-.hand-verified-card::before {
-  content: "VERIFICADO A MANO";
-  position: absolute;
-  top: -10px;
-  right: 20px;
-  background: var(--color-gilded-gold);
-  color: #ffffff;
-  font-family: var(--font-display);
-  font-size: 0.65rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  padding: 0.15rem 0.6rem;
-  border-radius: 4px;
+.preset-label {
+  font-size: 0.74rem;
+  color: var(--coq-pink-bg);
+  font-weight: 600;
+  margin-right: 0.15rem;
 }
 
-.step-math-row {
+.preset-btn {
+  background: #2e272a;
+  color: var(--coq-white);
+  border: 1px solid rgba(248, 212, 228, 0.45);
+  border-radius: 5px;
+  padding: 0.24rem 0.62rem;
+  font-size: 0.74rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.preset-btn:hover {
+  background: #3d3237;
+}
+
+.preset-btn.active {
+  background: var(--coq-pink-bg);
+  color: var(--coq-black);
+  border-color: var(--coq-white);
+  font-weight: 700;
+}
+
+.preset-btn.winner-btn {
+  border-color: #f4bed5;
+}
+
+/* Recuadro de Veredicto en Tiempo Real plano */
+.verdict-live-banner {
+  border-radius: 10px;
+  padding: 0.7rem 0.95rem;
+  margin-bottom: 0.8rem;
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.verdict-live-banner.good {
+  background: var(--ok-bg);
+  border-color: var(--ok-border);
+  color: var(--ok-text);
+}
+
+.verdict-live-banner.warn {
+  background: var(--warn-bg);
+  border-color: var(--warn-border);
+  color: var(--warn-text);
+}
+
+.verdict-live-banner.danger {
+  background: var(--bad-bg);
+  border-color: var(--bad-border);
+  color: var(--bad-text);
+}
+
+.verdict-main-text {
+  flex: 1;
+  min-width: 260px;
+}
+
+.verdict-headline {
+  font-family: var(--font-editorial);
+  font-size: 1.06rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.12rem;
+}
+
+.verdict-explanation {
+  font-size: 0.79rem;
+  line-height: 1.38;
+}
+
+.verdict-kpis {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+
+.verdict-kpi-pill {
+  background: var(--coq-white);
+  border: 1.5px solid currentColor;
+  border-radius: 6px;
+  padding: 0.26rem 0.6rem;
+  text-align: center;
+  min-width: 102px;
+}
+
+.verdict-kpi-pill small {
+  display: block;
+  font-size: 0.66rem;
+  text-transform: uppercase;
+}
+
+.verdict-kpi-pill strong {
+  font-family: var(--font-editorial);
+  font-size: 1.02rem;
+  font-weight: 700;
+}
+
+.hand-calc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.32rem;
+}
+
+.hand-calc-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.45rem 0;
-  border-bottom: 1px solid rgba(92, 56, 38, 0.08);
-  font-size: 0.9rem;
+  padding: 0.35rem 0.55rem;
+  background: var(--coq-pink-light);
+  border-radius: 5px;
+  border: 1px solid var(--coq-pink-border);
+  font-size: 0.79rem;
+  gap: 0.5rem;
 }
 
-.step-math-row:last-child {
-  border-bottom: none;
+.hand-calc-row code {
+  font-family: 'Courier New', monospace;
   font-weight: 700;
-  color: var(--color-chocolate-deep);
-}
-
-.math-formula {
-  font-family: 'Courier New', Courier, monospace;
-  background: #ede6dc;
-  padding: 0.15rem 0.45rem;
+  background: var(--coq-white);
+  padding: 0.08rem 0.4rem;
   border-radius: 4px;
-  font-size: 0.85rem;
+  border: 1px solid var(--coq-choco-bar);
+  color: var(--coq-choco-deep);
 }

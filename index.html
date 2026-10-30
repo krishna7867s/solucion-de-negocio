@@ -3,1046 +3,1671 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Valmont &amp; Partners | Strategic Financial Advisory &amp; Unit Economics</title>
-  
-  <!-- Estilos Artesanales y Editoriales -->
+  <title>Casos de Negocio | Tueste · Agendo · Sol de Casa</title>
+
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/cases.css">
-  
-  <!-- Chart.js CDN para visualización interactiva -->
+
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 </head>
 <body>
 
-  <!-- ENCABEZADO MAESTRO DE INSPIRACIÓN COQUETTE / IMPRENTA EDITORIAL -->
-  <header class="master-header">
-    <div class="filigree-ribbon">
-      <svg class="ribbon-bow-svg" viewBox="0 0 24 24">
-        <path d="M12 13c-2.5 0-5-1.5-6.5-3.5C4 7.5 4.5 5 6.5 4.5c2.5-.6 4.5 1.5 5.5 3 1-1.5 3-3.6 5.5-3 2 .5 2.5 3 1 5-1.5 2-4 3.5-6.5 3.5zm-1 2v5l-3-2-3 2 1.5-5.5c1.5 1 3.5 1.5 4.5 1.5zm2 0c1 0 3-.5 4.5-1.5L19 21l-3-2-3 2v-5z"/>
-      </svg>
-      <span>Valmont &amp; Partners &bull; Strategic Capital &amp; Advisory</span>
-      <svg class="ribbon-bow-svg" viewBox="0 0 24 24">
-        <path d="M12 13c-2.5 0-5-1.5-6.5-3.5C4 7.5 4.5 5 6.5 4.5c2.5-.6 4.5 1.5 5.5 3 1-1.5 3-3.6 5.5-3 2 .5 2.5 3 1 5-1.5 2-4 3.5-6.5 3.5zm-1 2v5l-3-2-3 2 1.5-5.5c1.5 1 3.5 1.5 4.5 1.5zm2 0c1 0 3-.5 4.5-1.5L19 21l-3-2-3 2v-5z"/>
-      </svg>
-    </div>
-    <h1 class="master-title">Valmont Strategic Advisory</h1>
-    <p class="master-subtitle">
-      Boutique de inteligencia financiera, auditoría independiente de unit economics y modelación de tesorería a 24 meses para comités de inversión y juntas directivas.
-    </p>
+  <!-- Esquinas exteriores de encaje blanco idénticas a la plantilla -->
+  <svg class="page-lace-corner top-left" viewBox="0 0 120 120" fill="none">
+    <path d="M0 0 H110 C95 18 82 22 68 38 C52 55 48 72 30 88 C18 98 10 105 0 112 Z" fill="rgba(255,255,255,0.12)"/>
+    <path d="M0 0 H85 C72 15 62 25 46 42 C30 58 18 70 0 85 Z" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="3 3" fill="none"/>
+    <circle cx="28" cy="28" r="14" stroke="#ffffff" stroke-width="1.5" fill="none"/>
+    <circle cx="28" cy="28" r="6" fill="#f8d4e4" fill-opacity="0.75"/>
+    <circle cx="58" cy="20" r="8" stroke="#ffffff" stroke-width="1.2" fill="none"/>
+    <circle cx="20" cy="58" r="8" stroke="#ffffff" stroke-width="1.2" fill="none"/>
+  </svg>
+  <svg class="page-lace-corner top-right" viewBox="0 0 120 120" fill="none">
+    <path d="M0 0 H110 C95 18 82 22 68 38 C52 55 48 72 30 88 C18 98 10 105 0 112 Z" fill="rgba(255,255,255,0.12)"/>
+    <path d="M0 0 H85 C72 15 62 25 46 42 C30 58 18 70 0 85 Z" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="3 3" fill="none"/>
+    <circle cx="28" cy="28" r="14" stroke="#ffffff" stroke-width="1.5" fill="none"/>
+    <circle cx="28" cy="28" r="6" fill="#f8d4e4" fill-opacity="0.75"/>
+  </svg>
+  <svg class="page-lace-corner bottom-left" viewBox="0 0 120 120" fill="none">
+    <path d="M0 0 H110 C95 18 82 22 68 38 C52 55 48 72 30 88 C18 98 10 105 0 112 Z" fill="rgba(255,255,255,0.12)"/>
+    <circle cx="28" cy="28" r="14" stroke="#ffffff" stroke-width="1.5" fill="none"/>
+  </svg>
+  <svg class="page-lace-corner bottom-right" viewBox="0 0 120 120" fill="none">
+    <path d="M0 0 H110 C95 18 82 22 68 38 C52 55 48 72 30 88 C18 98 10 105 0 112 Z" fill="rgba(255,255,255,0.12)"/>
+    <circle cx="28" cy="28" r="14" stroke="#ffffff" stroke-width="1.5" fill="none"/>
+  </svg>
 
-    <!-- Barra de Navegación de Pestañas -->
-    <nav class="navigation-bar">
-      <button class="tab-btn active" data-target="tab-master">
-        <span>Visión Transversal</span>
-        <span class="tab-badge">Comparador</span>
-      </button>
-      <button class="tab-btn" data-target="tab-tueste">
-        <span>Caso A: Tueste</span>
-        <span class="tab-badge">DTC Café</span>
-      </button>
-      <button class="tab-btn" data-target="tab-agendo">
-        <span>Caso B: Agendo</span>
-        <span class="tab-badge">SaaS B2B</span>
-      </button>
-      <button class="tab-btn" data-target="tab-soldecasa">
-        <span>Caso C: Sol de Casa</span>
-        <span class="tab-badge">Lead Gen</span>
-      </button>
-      <button class="tab-btn" data-target="tab-rubrica">
-        <span>Rúbrica &amp; Auditoría</span>
-        <span class="tab-badge">125 Pts</span>
-      </button>
-    </nav>
-  </header>
+  <!-- Lazo negro plano de la plantilla -->
+  <svg style="display:none;">
+    <symbol id="coquette-black-bow" viewBox="0 0 64 52">
+      <path d="M28 24 L14 48 L22 44 L26 50 L31 27 Z" fill="#141012" stroke="#47383e" stroke-width="1"/>
+      <path d="M36 24 L50 48 L42 44 L38 50 L33 27 Z" fill="#141012" stroke="#47383e" stroke-width="1"/>
+      <path d="M30 22 C18 6, 4 8, 6 22 C8 34, 22 30, 30 24 Z" fill="#181316" stroke="#47383e" stroke-width="1"/>
+      <path d="M34 22 C46 6, 60 8, 58 22 C56 34, 42 30, 34 24 Z" fill="#181316" stroke="#47383e" stroke-width="1"/>
+      <rect x="28" y="18" width="8" height="9" rx="2" fill="#0d0a0b" stroke="#524148" stroke-width="1"/>
+    </symbol>
+  </svg>
 
-  <main class="app-container">
+  <div class="deck-wrapper">
 
-    <!-- ============================================================== -->
-    <!-- PESTAÑA 1: VISIÓN TRANSVERSAL (MASTER COMPARADOR)               -->
-    <!-- ============================================================== -->
-    <section id="tab-master" class="tab-content active">
-      <div class="executive-summary-card">
-        <div class="card-title-group" style="text-align: center; margin-bottom: 1.5rem;">
-          <span class="level-badge level-1" style="margin-bottom: 0.5rem;">Marco Conceptual Unificado</span>
-          <h2 style="font-size: 2.1rem; color: var(--color-chocolate-deep);">La Anatomía Financiera de las Tres Trampas Métricas</h2>
-          <p style="max-width: 800px; margin: 0.5rem auto 0; color: var(--color-text-secondary);">
-            En los tres modelos existe una métrica superficial que seduce a agencias y fundadores, pero que al auditar la tesorería real revela destrucción de capital.
-          </p>
-        </div>
+    <!-- ENCABEZADO Y PESTAÑAS DE LOS 3 CASOS -->
+    <header class="top-poster-header">
+      <div class="poster-brand">
+        <svg class="bow-decoration"><use href="#coquette-black-bow"/></svg>
+        <h1 class="poster-script-title">Modelos de Negocio</h1>
+        <span class="poster-subtitle-pill">Sesión 1: ¿Cuánto puede pagar un negocio por conseguir un cliente?</span>
+      </div>
 
-        <div class="grid-3">
-          <div class="ornate-card brand-theme-tueste" style="margin-bottom: 0;">
-            <span class="case-ribbon-tag" style="padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">CASO A · DTC</span>
-            <h3 style="margin-top: 0.75rem; font-family: var(--font-serif); font-size: 1.3rem;">Tueste Café</h3>
-            <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1rem;">E-Commerce Directo al Consumidor</p>
-            <div class="callout-box trap-box" style="margin: 0 0 1rem 0; padding: 0.9rem;">
-              <strong style="color: #991b1b; display: block; font-size: 0.85rem;">La Trampa: ROAS Inflado de 3.0x</strong>
-              <p style="font-size: 0.82rem; margin-top: 0.3rem;">Meta se atribuye 315 compras de retargeting de clientes que ya conocían la marca. El ROAS real de adquisición es apenas 0.70x.</p>
-            </div>
-            <p style="font-size: 0.85rem;"><strong>Decisión:</strong> Rechazar propuesta de $16k con 30% descuento. Invertir $6k y lanzar Pack de $48 para llevar el banco a +$158k.</p>
+      <nav class="case-tabs-nav" aria-label="Casos">
+        <button class="case-tab-btn active" data-case="case-tueste">
+          <span class="case-tab-name">Caso A · Tueste</span>
+          <span class="case-tab-tag">Café DTC</span>
+        </button>
+        <button class="case-tab-btn" data-case="case-agendo">
+          <span class="case-tab-name">Caso B · Agendo</span>
+          <span class="case-tab-tag">SaaS B2B</span>
+        </button>
+        <button class="case-tab-btn" data-case="case-soldecasa">
+          <span class="case-tab-name">Caso C · Sol de Casa</span>
+          <span class="case-tab-tag">Paneles Solares</span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- ================================================================== -->
+    <!-- PESTAÑA 1: CASO A · TUESTE                                         -->
+    <!-- ================================================================== -->
+    <section id="case-tueste" class="case-section active">
+
+      <div class="coquette-topic-bar">
+        <div class="topic-bar-inner">
+          <div class="case-identity-banner">
+            <svg class="bow-decoration"><use href="#coquette-black-bow"/></svg>
+            <h2>Caso A: Tueste</h2>
+            <span class="case-question">Café de especialidad DTC · Banco inicial: $35.000 · Piso: $5.000 · Meta: 2da Tostadora ($14.000)</span>
           </div>
 
-          <div class="ornate-card brand-theme-agendo" style="margin-bottom: 0;">
-            <span class="case-ribbon-tag" style="padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">CASO B · SAAS</span>
-            <h3 style="margin-top: 0.75rem; font-family: var(--font-serif); font-size: 1.3rem;">Agendo Software</h3>
-            <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1rem;">Suscripción para Barberías y Salones</p>
-            <div class="callout-box trap-box" style="margin: 0 0 1rem 0; padding: 0.9rem;">
-              <strong style="color: #991b1b; display: block; font-size: 0.85rem;">La Trampa: CAC Blended de $105</strong>
-              <p style="font-size: 0.82rem; margin-top: 0.3rem;">Valeria mezcló 50 clientes orgánicos gratuitos para maquillar el costo real de los anuncios ($180) y ocultar un CAC marginal de $398.</p>
-            </div>
-            <p style="font-size: 0.85rem;"><strong>Decisión:</strong> No triplicar a $30k (quiebra en Mes 14). Topar anuncios en $12k e impulsar cobro anual por adelantado para cerrar con +$343k.</p>
-          </div>
-
-          <div class="ornate-card brand-theme-soldecasa" style="margin-bottom: 0;">
-            <span class="case-ribbon-tag" style="padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">CASO C · LEAD GEN</span>
-            <h3 style="margin-top: 0.75rem; font-family: var(--font-serif); font-size: 1.3rem;">Sol de Casa</h3>
-            <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1rem;">Paneles Solares Residenciales</p>
-            <div class="callout-box trap-box" style="margin: 0 0 1rem 0; padding: 0.9rem;">
-              <strong style="color: #991b1b; display: block; font-size: 0.85rem;">La Trampa: CPL Barato ($8 vs $40)</strong>
-              <p style="font-size: 0.82rem; margin-top: 0.3rem;">Meta da leads 5x más baratos pero exige 5.5 visitas técnicas por venta ($60 c/u). Google cierra al 30% y su CAC real es 25% más barato.</p>
-            </div>
-            <p style="font-size: 0.85rem;"><strong>Decisión:</strong> No migrar presupuesto a Meta. Contratar 3er técnico, maxear Google a $8k y filtrar Meta para generar $442k de caja.</p>
+          <div class="part-plaques-group" data-case-group="tueste">
+            <button class="topic-plaque-btn active" data-part="tueste-part-1">
+              <span class="plaque-script">Parte 1 · Nivel 1</span>
+              <span class="plaque-sub">Calculadora y Escenarios</span>
+            </button>
+            <button class="topic-plaque-btn" data-part="tueste-part-2">
+              <span class="plaque-script">Parte 2 · Nivel 2</span>
+              <span class="plaque-sub">Tablero Interactivo</span>
+            </button>
+            <button class="topic-plaque-btn" data-part="tueste-part-3">
+              <span class="plaque-script">Parte 3 · Nivel 3</span>
+              <span class="plaque-sub">Simulador 24m en Tiempo Real</span>
+            </button>
           </div>
         </div>
       </div>
 
-      <!-- Cuadro Comparativo Maestro de Unit Economics -->
-      <div class="ornate-card">
-        <div class="ornate-card-header">
-          <div class="card-title-group">
-            <h3>Matriz Comparativa de Unit Economics &amp; Dinámica de Tesorería</h3>
-            <p>Paralelo riguroso de indicadores financieros clave entre los tres modelos</p>
-          </div>
-          <span class="badge-status good">Auditoría 100% Consistente</span>
-        </div>
+      <!-- CASO A · PARTE 1 (NIVEL 1: LA CALCULADORA) -->
+      <div id="tueste-part-1" class="part-panel active">
+        <div class="coquette-slide-frame">
+          <div class="doily-canvas">
+            <div class="slide-part-header">
+              <div class="slide-title-block">
+                <h3 class="slide-script-heading">Nivel 1 · La calculadora de Diego</h3>
+                <span class="slide-subtitle-italic">Márgenes por pedido, trampa de atribución de Meta y comparativa de los 3 escenarios</span>
+              </div>
+              <span class="status-pill good">Jugada Maestra: Cortar Retargeting ($2.400) + Pack $48 + Camino $4k -> $7,5k</span>
+            </div>
 
-        <div class="table-responsive">
-          <table class="editorial-table">
-            <thead>
-              <tr>
-                <th>Dimensión Financiera</th>
-                <th>Caso A: Tueste (DTC)</th>
-                <th>Caso B: Agendo (SaaS)</th>
-                <th>Caso C: Sol de Casa (Servicios)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Precio Promedio Unitario</strong></td>
-                <td>$34.00 (Pedido típico de 2 bolsas)</td>
-                <td>$25.00 / mes (Plan mensual recurrente)</td>
-                <td>$6,500.00 (Instalación solar completa)</td>
-              </tr>
-              <tr>
-                <td><strong>Margen Bruto de Operación</strong></td>
-                <td>46.7% ($15.89 por pedido suelto)</td>
-                <td>78.0% ($19.50 de margen mensual)</td>
-                <td>28.0% ($1,820 de margen bruto)</td>
-              </tr>
-              <tr>
-                <td><strong>Costo Adquisición Reportado vs Real</strong></td>
-                <td>$48.48 (Anuncios) vs <strong>$54.55 (Real)</strong></td>
-                <td>$105.00 (Blended) vs <strong>$180.00 (Paid)</strong></td>
-                <td>$384.80 (Meta) vs <strong>$718.13 (CAC Real Meta)</strong></td>
-              </tr>
-              <tr>
-                <td><strong>Valor de Vida del Cliente (LTV)</strong></td>
-                <td>$54.80 (12 meses ponderado)</td>
-                <td>$251.30 (24 meses con churn 6%)</td>
-                <td>$1,625.00 (Margen neto antes de mkt)</td>
-              </tr>
-              <tr>
-                <td><strong>Ratio LTV : CAC Real Actual</strong></td>
-                <td><strong>1.00x (Alerta Roja)</strong></td>
-                <td><strong>1.40x (Precario)</strong></td>
-                <td><strong>2.62x (Google 3.03x / Meta 2.26x)</strong></td>
-              </tr>
-              <tr>
-                <td><strong>Descalce Inicial de Caja</strong></td>
-                <td>-$39.14 por cliente en Mes 1</td>
-                <td>-$160.50 en Mes 1 (Payback Mes 12)</td>
-                <td>-$520.00 por firma (Proveedor cobra 55%)</td>
-              </tr>
-              <tr>
-                <td><strong>Caja Mes 24: Plan Agencia vs Maestro</strong></td>
-                <td>-$82,255 (Quiebra) vs <strong>+$158,285</strong></td>
-                <td>-$162,689 (Quiebra) vs <strong>+$343,890</strong></td>
-                <td>-$60,898 (Quiebra) vs <strong>+$442,639</strong></td>
-              </tr>
-            </tbody>
-          </table>
+            <div class="grid-4" style="margin-bottom: 0.8rem;">
+              <div class="cameo-metric-box">
+                <div class="m-label">Margen Pedido Suelto ($34)</div>
+                <div class="m-val">$15,89 (46,7%)</div>
+                <div class="m-note">Suscripción ($30,60): $12,64 (41,3%)</div>
+              </div>
+              <div class="cameo-metric-box">
+                <div class="m-label">ROAS de Break-Even</div>
+                <div class="m-val">2,14x</div>
+                <div class="m-note">Con 30% descuento sube a 3,87x</div>
+              </div>
+              <div class="cameo-metric-box dark-plaque">
+                <div class="m-label">La Trampa · ROAS Real 1er Pedido</div>
+                <div class="m-val">0,70x vs 3,00x</div>
+                <div class="m-note">165 clientes × $34 = $5.610 ÷ $8.000</div>
+              </div>
+              <div class="cameo-metric-box">
+                <div class="m-label">CAC Real vs LTV 12 Meses</div>
+                <div class="m-val">$54,55 vs $54,80</div>
+                <div class="m-note">LTV:CAC Hoy = 1,00x · Payback Mes 11</div>
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div>
+                <div class="inner-subtabs" data-subtab-group="tueste-p1">
+                  <button class="subtab-pill active" data-subpane="tp1-escenarios">1. Tres Escenarios Lado a Lado</button>
+                  <button class="subtab-pill" data-subpane="tp1-pedidos">2. Costo y Margen por Pedido</button>
+                  <button class="subtab-pill" data-subpane="tp1-mano">3. Fila Verificada a Mano</button>
+                </div>
+
+                <div id="tp1-escenarios" class="subtab-pane active">
+                  <div class="table-box">
+                    <table class="coq-table">
+                      <thead>
+                        <tr>
+                          <th>Indicador</th>
+                          <th>Hoy ($8.000)</th>
+                          <th>Agencia ($16k + 30% desc)</th>
+                          <th>Jugada Maestra ($4k->$7,5k + Pack)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><strong>Inversión Meta + Fee Agencia</strong></td>
+                          <td>$8.000 + $1.000</td>
+                          <td>$16.000 + $1.000</td>
+                          <td>$4k (M1-4) -> $7,5k (M5-24) + $0 fee</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Clientes nuevos de Meta</strong></td>
+                          <td>165 clientes</td>
+                          <td>235 clientes (+70 extra)</td>
+                          <td>100 (en $4k) -> 156,9 (en $7,5k)</td>
+                        </tr>
+                        <tr>
+                          <td><strong>CAC de anuncios / CAC Real</strong></td>
+                          <td>$48,48 / <strong>$54,55</strong></td>
+                          <td>$68,09 / <strong>$72,34</strong></td>
+                          <td><strong>$40,00</strong> (M1-4) / <strong>$47,81</strong> (M5-24)</td>
+                        </tr>
+                        <tr>
+                          <td><strong>CAC Marginal del tramo</strong></td>
+                          <td>$61,54 ($4k a $8k)</td>
+                          <td><strong>$114,29</strong> ($8k extra ÷ 70)</td>
+                          <td>$40,00 en Etapa 1 (el más barato)</td>
+                        </tr>
+                        <tr>
+                          <td><strong>ROAS real del 1er pedido</strong></td>
+                          <td>0,70x ($5.610 ÷ $8k)</td>
+                          <td>0,35x ($5.593 ÷ $16k)</td>
+                          <td><strong>1,02x</strong> (Pack $48 + sin agencia)</td>
+                        </tr>
+                        <tr>
+                          <td><strong>LTV a 12 meses (contribución)</strong></td>
+                          <td>$54,80 (85% suelto / 15% sub)</td>
+                          <td>$46,52 (cae por 30% desc)</td>
+                          <td><strong>$71,48</strong> (Pack $48 + 28% sub)</td>
+                        </tr>
+                        <tr class="row-winner">
+                          <td><strong>LTV:CAC Real y Payback</strong></td>
+                          <td>1,00x · Mes 11</td>
+                          <td>0,64x · Nunca recupera</td>
+                          <td><strong>1,79x (M1-4) / 1,50x · Mes 3</strong></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div id="tp1-pedidos" class="subtab-pane">
+                  <div class="table-box">
+                    <table class="coq-table">
+                      <thead>
+                        <tr>
+                          <th>Concepto</th>
+                          <th>2 Bolsas Suelto</th>
+                          <th>Suscripción (-10%)</th>
+                          <th>Con 30% Desc.</th>
+                          <th>Pack 3 Bolsas ($48)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><strong>Precio cobrado</strong></td>
+                          <td><strong>$34,00</strong></td>
+                          <td><strong>$30,60</strong></td>
+                          <td><strong>$23,80</strong></td>
+                          <td><strong>$48,00</strong></td>
+                        </tr>
+                        <tr>
+                          <td>Café ($5,44 por bolsa)</td>
+                          <td>-$10,88</td>
+                          <td>-$10,88</td>
+                          <td>-$10,88</td>
+                          <td>-$16,32 (3 bolsas)</td>
+                        </tr>
+                        <tr>
+                          <td>Envío pagado por Tueste</td>
+                          <td>-$4,50</td>
+                          <td>-$4,50</td>
+                          <td>-$4,50</td>
+                          <td>-$4,50 (gratis >$45)</td>
+                        </tr>
+                        <tr>
+                          <td>Pasarela (4,5%) + Caja</td>
+                          <td>-$1,53 - $1,20</td>
+                          <td>-$1,38 - $1,20</td>
+                          <td>-$1,07 - $1,20</td>
+                          <td>-$2,16 - $1,40</td>
+                        </tr>
+                        <tr class="row-winner">
+                          <td><strong>Margen ($ y %)</strong></td>
+                          <td><strong>$15,89 (46,74%)</strong></td>
+                          <td><strong>$12,64 (41,32%)</strong></td>
+                          <td><strong>$6,15 (25,84%)</strong></td>
+                          <td><strong>$23,62 (49,21%)</strong></td>
+                        </tr>
+                        <tr>
+                          <td><strong>ROAS Break-Even</strong></td>
+                          <td><strong>2,14x</strong></td>
+                          <td><strong>2,42x</strong></td>
+                          <td><strong>3,87x</strong></td>
+                          <td><strong>2,03x</strong></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div id="tp1-mano" class="subtab-pane">
+                  <div class="coq-info-card">
+                    <h4>Cuentas Verificadas a Mano (Secciones 1 a 5)</h4>
+                    <div class="hand-calc-list">
+                      <div class="hand-calc-row">
+                        <span>Margen suelto ($34):</span>
+                        <code>$34 - ($10,88 + $4,50 + $1,53 + $1,20) = $15,89 (46,74%)</code>
+                      </div>
+                      <div class="hand-calc-row">
+                        <span>CAC Anuncios y CAC Real:</span>
+                        <code>$8.000 ÷ 165 = $48,48 | ($8.000 + $1.000) ÷ 165 = $54,55</code>
+                      </div>
+                      <div class="hand-calc-row">
+                        <span>LTV 12m Suelto y Suscriptor:</span>
+                        <code>Suelto: 3 × $15,89 = $47,67 | Sub: 7,5282 × $12,643 = $95,18</code>
+                      </div>
+                      <div class="hand-calc-row">
+                        <span>LTV Ponderado (85% / 15%):</span>
+                        <code>(0,85 × $47,67) + (0,15 × $95,18) = $40,52 + $14,28 = $54,80</code>
+                      </div>
+                      <div class="hand-calc-row">
+                        <span>CAC Marginal Propuesta ($8k->$16k):</span>
+                        <code>($16.000 - $8.000) ÷ (235 - 165) = $8.000 ÷ 70 = $114,29</code>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Columna derecha: Desglose numérico de la Trampa y la Jugada Maestra -->
+              <div style="display:flex; flex-direction:column; gap:0.7rem;">
+                <div class="coq-info-card trap-highlight">
+                  <h4>Radiografía Numérica de la Trampa (Captura de Meta vs Shopify)</h4>
+                  <ul>
+                    <li><strong>$2.400 tirados en Retargeting:</strong> De los $8.000 en Meta, $1.400 van a <code>RTG_Visitantes_30d</code> y $1.000 a <code>RTG_Compradores_180d</code> (315 compras = $10.700 de personas que ya compraban solas).</li>
+                    <li><strong>ROAS real de captación = 0,70x:</strong> Solo llegaron 165 clientes nuevos por Meta (<code>165 × $34 = $5.610</code> sobre $8.000). Cada cliente nuevo deja $15,40 en su primer mes pero cuesta $54,55: <strong>drena -$39,15 de caja al entrar</strong>.</li>
+                    <li><strong>Duplicar a $16.000 con 30% de descuento:</strong> Cada uno de los 70 clientes extra cuesta <strong>$114,29 de CAC marginal</strong> y con 30% de descuento deja apenas <strong>$6,15</strong> en su primer pedido. Quema el banco en 3 meses.</li>
+                  </ul>
+                </div>
+
+                <div class="coquette-oval-callout">
+                  <h4 style="font-family:var(--font-editorial); font-size:1.05rem; color:var(--coq-choco-deep); margin-bottom:0.25rem;">
+                    Jugada Maestra Ganadora (En 2 Etapas + Pack $48)
+                  </h4>
+                  <ul style="font-size:0.8rem; color:var(--coq-choco-deep); padding-left:1.1rem; line-height:1.42;">
+                    <li><strong>Etapa 1 (Meses 1 a 4 · $4.000/mes sin agencia):</strong> Apagar las 2 campañas de retargeting y dejar $4.000 en prospección pura (100 clientes Meta + 47 orgánicos a <strong>$40,00 de CAC real</strong>). Activar el <strong>Pack de 3 bolsas ($48)</strong> con envío gratis solo desde $45 y 28% de suscripción. La caja sube desde el Mes 1 y en el <strong>Mes 3 ya sobra para pagar los $14.000 de la 2da tostadora</strong> sin tocar el piso de $5.000.</li>
+                    <li><strong>Etapa 2 (Meses 5 a 24 · $7.500/mes):</strong> Con la base de suscriptores financiando el crecimiento, subir a $7.500/mes (cumpliendo la regla del Mes 13) para cerrar el Mes 24 con <strong>$164.890 en el banco</strong> y <strong>393 suscriptores activos</strong>.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
+
+      <!-- CASO A · PARTE 2 (NIVEL 2: EL TABLERO) -->
+      <div id="tueste-part-2" class="part-panel">
+        <div class="coquette-slide-frame chocolate-slide">
+          <div class="doily-canvas">
+            <div class="slide-part-header">
+              <div class="slide-title-block">
+                <h3 class="slide-script-heading">Nivel 2 · El tablero de Tueste</h3>
+                <span class="slide-subtitle-italic">Controles en vivo de los 9 parámetros del caso y los 4 gráficos con umbrales</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:0.6rem;">
+                <span class="status-pill warn" id="tueste-semaforo-ltv">LTV:CAC 1,00x (Amarillo: 1 a 3)</span>
+                <button class="btn-coq-reset" id="btn-tueste-reset">Volver a datos del caso</button>
+              </div>
+            </div>
+
+            <div class="grid-4" style="margin-bottom: 0.75rem;">
+              <div class="cameo-metric-box">
+                <div class="m-label">1. Margen Contribución</div>
+                <div class="m-val" id="tueste-val-margen">$15,89 (46,7%)</div>
+                <div class="m-note">ROAS Break-Even: <strong id="tueste-val-roasbe">2,14x</strong></div>
+              </div>
+              <div class="cameo-metric-box">
+                <div class="m-label">2. CAC Real y CAC Marginal</div>
+                <div class="m-val" id="tueste-val-cacreal">$54,55</div>
+                <div class="m-note">CAC Marginal tramo: <strong id="tueste-val-cacmarg">$61,54</strong></div>
+              </div>
+              <div class="cameo-metric-box dark-plaque">
+                <div class="m-label">3. ROAS Real 1er Pedido</div>
+                <div class="m-val" id="tueste-val-roasreal">0,70x</div>
+                <div class="m-note">Meta dice 3,00x · Clientes Meta: <strong id="tueste-val-cmeta">165</strong></div>
+              </div>
+              <div class="cameo-metric-box">
+                <div class="m-label">4. LTV 12m · LTV:CAC · Payback</div>
+                <div class="m-val"><span id="tueste-val-ltv">$54,80</span> · <span id="tueste-val-ltvcac">1,00x</span></div>
+                <div class="m-note">Payback: <strong id="tueste-val-payback">Mes 11</strong></div>
+              </div>
+            </div>
+
+            <div class="grid-lvl2-layout">
+              <div class="sliders-box">
+                <h4 style="font-family:var(--font-editorial); font-size:0.98rem; color:var(--coq-choco-deep); margin-bottom:0.45rem;">
+                  Controles del modelo de Tueste
+                </h4>
+                <div class="sliders-grid-2col">
+                  <div class="slider-item full-span">
+                    <div class="slider-top-row">
+                      <span class="slider-name">Inversión en Meta ($0 a $20.000)</span>
+                      <span class="slider-val-pill" id="badge-tueste-inv">$8.000</span>
+                    </div>
+                    <input type="range" class="coq-range" id="slider-tueste-inv" min="0" max="20000" step="500" value="8000">
+                  </div>
+
+                  <div class="slider-item">
+                    <div class="slider-top-row">
+                      <span class="slider-name">Precio bolsa ($)</span>
+                      <span class="slider-val-pill" id="badge-tueste-precio">$17,00</span>
+                    </div>
+                    <input type="range" class="coq-range" id="slider-tueste-precio" min="14" max="24" step="0.5" value="17">
+                  </div>
+
+                  <div class="slider-item">
+                    <div class="slider-top-row">
+                      <span class="slider-name">Costo café/bolsa</span>
+                      <span class="slider-val-pill" id="badge-tueste-cafe">$5,44</span>
+                    </div>
+                    <input type="range" class="coq-range" id="slider-tueste-cafe" min="3.50" max="8.00" step="0.08" value="5.44">
+                  </div>
+
+                  <div class="slider-item">
+                    <div class="slider-top-row">
+                      <span class="slider-name">Costo envío ($)</span>
+                      <span class="slider-val-pill" id="badge-tueste-envio">$4,50</span>
+                    </div>
+                    <input type="range" class="coq-range" id="slider-tueste-envio" min="0" max="7.00" step="0.25" value="4.50">
+                  </div>
+
+                  <div class="slider-item">
+                    <div class="slider-top-row">
+                      <span class="slider-name">% Suscriptores</span>
+                      <span class="slider-val-pill" id="badge-tueste-sub">15%</span>
+                    </div>
+                    <input type="range" class="coq-range" id="slider-tueste-sub" min="5" max="45" step="1" value="15">
+                  </div>
+
+                  <div class="slider-item">
+                    <div class="slider-top-row">
+                      <span class="slider-name">Cancelación sub/mes</span>
+                      <span class="slider-val-pill" id="badge-tueste-churn">9,0%</span>
+                    </div>
+                    <input type="range" class="coq-range" id="slider-tueste-churn" min="3" max="18" step="0.5" value="9">
+                  </div>
+
+                  <div class="slider-item">
+                    <div class="slider-top-row">
+                      <span class="slider-name">Pedidos 12m suelto</span>
+                      <span class="slider-val-pill" id="badge-tueste-pedidos">3,00</span>
+                    </div>
+                    <input type="range" class="coq-range" id="slider-tueste-pedidos" min="1.5" max="5.0" step="0.25" value="3.0">
+                  </div>
+
+                  <div class="slider-item">
+                    <div class="slider-top-row">
+                      <span class="slider-name">Fee agencia ($)</span>
+                      <span class="slider-val-pill" id="badge-tueste-fee">$1.000</span>
+                    </div>
+                    <input type="range" class="coq-range" id="slider-tueste-fee" min="0" max="2000" step="250" value="1000">
+                  </div>
+
+                  <div class="slider-item">
+                    <div class="slider-top-row">
+                      <span class="slider-name">Desc. 1er pedido</span>
+                      <span class="slider-val-pill" id="badge-tueste-desc">0%</span>
+                    </div>
+                    <input type="range" class="coq-range" id="slider-tueste-desc" min="0" max="40" step="5" value="0">
+                  </div>
+                </div>
+              </div>
+
+              <div class="charts-grid-2x2">
+                <div class="chart-frame">
+                  <div class="chart-frame-head">
+                    <span class="chart-frame-title">1. La Trampa del ROAS</span>
+                    <span class="chart-frame-sub">Ads Manager (3,0) vs Break-Even vs Real</span>
+                  </div>
+                  <div class="canvas-box-sm">
+                    <canvas id="chart-tueste-trap"></canvas>
+                  </div>
+                </div>
+
+                <div class="chart-frame">
+                  <div class="chart-frame-head">
+                    <span class="chart-frame-title">2. Curva de Caja de 1 Cliente (M0 a M12)</span>
+                    <span class="chart-frame-sub">Controles vs Agencia vs Jugada Maestra</span>
+                  </div>
+                  <div class="canvas-box-sm">
+                    <canvas id="chart-tueste-cashcurve"></canvas>
+                  </div>
+                </div>
+
+                <div class="chart-frame">
+                  <div class="chart-frame-head">
+                    <span class="chart-frame-title">3. LTV frente al CAC Real</span>
+                    <span class="chart-frame-sub">Con líneas de umbral 1:1 y 3:1</span>
+                  </div>
+                  <div class="canvas-box-sm">
+                    <canvas id="chart-tueste-ltvcac"></canvas>
+                  </div>
+                </div>
+
+                <div class="chart-frame">
+                  <div class="chart-frame-head">
+                    <span class="chart-frame-title">4. Clientes Nuevos vs CAC Marginal</span>
+                    <span class="chart-frame-sub">Historial ($0 a $20k) y costo extra por tramo</span>
+                  </div>
+                  <div class="canvas-box-sm">
+                    <canvas id="chart-tueste-marginal"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO A · PARTE 3 (NIVEL 3: SIMULADOR 24 MESES EN TIEMPO REAL) -->
+      <div id="tueste-part-3" class="part-panel">
+        <div class="coquette-slide-frame">
+          <div class="doily-canvas">
+
+            <div class="realtime-investor-bar">
+              <div class="rt-controls-row">
+                <div class="rt-input-group">
+                  <label class="rt-input-label" for="tueste-rt-inv-num">Inversión M1 a M4:</label>
+                  <div class="rt-money-field">
+                    <span>$</span>
+                    <input type="number" id="tueste-rt-inv-num" class="rt-number-input" min="0" max="20000" step="250" value="4000">
+                  </div>
+                  <input type="range" id="tueste-rt-inv-slider" class="coq-range rt-slider-inline" min="0" max="20000" step="250" value="4000">
+
+                  <label class="rt-input-label" for="tueste-rt-inv2-num" style="margin-left:0.35rem;">M5 a M24:</label>
+                  <div class="rt-money-field">
+                    <span>$</span>
+                    <input type="number" id="tueste-rt-inv2-num" class="rt-number-input" min="0" max="20000" step="250" value="7500">
+                  </div>
+                  <input type="range" id="tueste-rt-inv2-slider" class="coq-range rt-slider-inline" min="0" max="20000" step="250" value="7500">
+                </div>
+
+                <div class="rt-toggles-group">
+                  <label class="rt-check-chip">
+                    <input type="checkbox" id="tueste-rt-pack" checked>
+                    <span>Pack $48 (envío >$45)</span>
+                  </label>
+                  <label class="rt-check-chip">
+                    <input type="checkbox" id="tueste-rt-sub28" checked>
+                    <span>28% Suscriptores</span>
+                  </label>
+                  <label class="rt-check-chip">
+                    <input type="checkbox" id="tueste-rt-noagency" checked>
+                    <span>Sin agencia (-$1.000)</span>
+                  </label>
+                  <label class="rt-check-chip">
+                    <input type="checkbox" id="tueste-rt-desc30">
+                    <span>30% desc. 1er pedido</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="preset-plans-row">
+                <span class="preset-label">Cargar plan en tiempo real:</span>
+                <button class="preset-btn plan-btn-tueste" data-plan="actual">Plan 1: Hoy ($8.000 fijos)</button>
+                <button class="preset-btn plan-btn-tueste" data-plan="agency">Plan 2: Agencia ($16.000 + 30% desc)</button>
+                <button class="preset-btn plan-btn-tueste" data-plan="conservative">Plan 3: Propio Fijo ($6.000 + Pack)</button>
+                <button class="preset-btn plan-btn-tueste winner-btn active" data-plan="master">Plan 4: Jugada Maestra 2 Etapas ($4k -> $7,5k + Pack)</button>
+              </div>
+            </div>
+
+            <div id="tueste-rt-verdict" class="verdict-live-banner good">
+              <div class="verdict-main-text">
+                <strong class="verdict-headline" id="tueste-verdict-title">SÍ ES BUENO PARA INVERTIR — JUGADA MAESTRA ÓPTIMA</strong>
+                <p class="verdict-explanation" id="tueste-verdict-desc">
+                  La caja sube desde el Mes 1, financia la 2da tostadora ($14.000) al contado en el Mes 3 y maximiza caja y suscriptores al Mes 24.
+                </p>
+              </div>
+              <div class="verdict-kpis">
+                <div class="verdict-kpi-pill">
+                  <small>Caja Mínima</small>
+                  <strong id="tueste-vkpi-min">$35.000 (M0)</strong>
+                </div>
+                <div class="verdict-kpi-pill">
+                  <small>Caja Mes 24</small>
+                  <strong id="tueste-vkpi-final">$164.890</strong>
+                </div>
+                <div class="verdict-kpi-pill">
+                  <small>Suscriptores M24</small>
+                  <strong id="tueste-vkpi-subs">393 activos</strong>
+                </div>
+                <div class="verdict-kpi-pill">
+                  <small>2da Tostadora ($14k)</small>
+                  <strong id="tueste-vkpi-cac">Lista en Mes 3</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-sim-layout">
+              <div class="chart-frame">
+                <div class="chart-frame-head">
+                  <span class="chart-frame-title">Gráfica en Tiempo Real: Saldo Bancario de Tueste (Mes 0 al 24)</span>
+                  <span class="chart-frame-sub">Tu inversión en vivo frente a Hoy ($8k), Agencia ($16k) y el Piso ($5.000)</span>
+                </div>
+                <div class="canvas-box-lg">
+                  <canvas id="chart-tueste-sim24m"></canvas>
+                </div>
+              </div>
+
+              <div>
+                <div class="inner-subtabs" data-subtab-group="tueste-p3">
+                  <button class="subtab-pill active" data-subpane="tp3-planes">Comparar 4 Planes</button>
+                  <button class="subtab-pill" data-subpane="tp3-tabla24">Tabla 24 Meses (En Vivo)</button>
+                  <button class="subtab-pill" data-subpane="tp3-mes1">Revisión Mes 1 ($8k)</button>
+                </div>
+
+                <div id="tp3-planes" class="subtab-pane active">
+                  <div class="table-box">
+                    <table class="coq-table">
+                      <thead>
+                        <tr>
+                          <th>Plan (24 Meses)</th>
+                          <th>Inversión/mes</th>
+                          <th>Caja Mínima (Mes)</th>
+                          <th>Caja Mes 24</th>
+                          <th>Suscriptores M24</th>
+                        </tr>
+                      </thead>
+                      <tbody id="tbody-tueste-compare"></tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div id="tp3-tabla24" class="subtab-pane">
+                  <div class="table-box scroll-y">
+                    <table class="coq-table">
+                      <thead>
+                        <tr>
+                          <th>Mes</th>
+                          <th>Inversión</th>
+                          <th>Nuevos</th>
+                          <th>Contrib. Actuales</th>
+                          <th>Contrib. Nuevos</th>
+                          <th>Salidas</th>
+                          <th>Caja Final</th>
+                          <th>Estado</th>
+                        </tr>
+                      </thead>
+                      <tbody id="tbody-tueste-24m"></tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div id="tp3-mes1" class="subtab-pane">
+                  <div class="coq-info-card">
+                    <h4>Revisión del Mes 1 a Mano (Plan de $8.000 fijos · Pág. 10 del caso)</h4>
+                    <div class="hand-calc-list">
+                      <div class="hand-calc-row">
+                        <span>1. Clientes nuevos Mes 1:</span>
+                        <code>165 (Meta con $8k) + 47 (sin pauta) = 212 clientes</code>
+                      </div>
+                      <div class="hand-calc-row">
+                        <span>2. Mezcla cohorte Mes 1:</span>
+                        <code>180,2 sueltos (85%) y 31,8 suscriptores (15%)</code>
+                      </div>
+                      <div class="hand-calc-row">
+                        <span>3. Contribución clientes actuales:</span>
+                        <code>$9.000,00 (en Mes 1; luego baja 3% por mes)</code>
+                      </div>
+                      <div class="hand-calc-row">
+                        <span>4. Contribución grupo nuevo M1:</span>
+                        <code>(180,2 × $15,89) + (31,8 × $12,643) = $3.265,43</code>
+                      </div>
+                      <div class="hand-calc-row">
+                        <span>5. Salidas del Mes 1:</span>
+                        <code>$8.000 (Meta) + $1.000 (fee) + $6.500 (fijos) = $15.500,00</code>
+                      </div>
+                      <div class="hand-calc-row">
+                        <span>6. Caja final Mes 1:</span>
+                        <code>$35.000 + $9.000 + $3.265,43 - $15.500 = $31.765,43 (-$3.234,57)</code>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
     </section>
 
+    <!-- ================================================================== -->
+    <!-- PESTAÑA 2: CASO B · AGENDO                                         -->
+    <!-- ================================================================== -->
+    <section id="case-agendo" class="case-section">
 
-    <!-- ============================================================== -->
-    <!-- PESTAÑA 2: CASO A · TUESTE (DTC)                               -->
-    <!-- ============================================================== -->
-    <section id="tab-tueste" class="tab-content brand-theme-tueste">
-      
-      <!-- NIVEL 1: CALCULADORA Y RECOMENDACIÓN -->
-      <div class="ornate-card">
-        <div class="ornate-card-header">
-          <div class="card-title-group">
-            <span class="level-badge level-1">Nivel 1 · Calculadora y Rigor Numérico</span>
-            <h2>Diagnóstico Estratégico y Auditoría de Unit Economics: Tueste</h2>
-            <p>Auditoría de los números de septiembre y recomendación ejecutiva para Diego y Camila</p>
-          </div>
-          <button class="btn-ornate-secondary" id="btn-tueste-reset">Restablecer Datos Base</button>
-        </div>
-
-        <div class="grid-4" style="margin-bottom: 1.5rem;">
-          <div class="metric-cameo">
-            <div class="metric-label">Margen Contribución</div>
-            <div class="metric-value" id="tueste-val-margen">$15.89 (46.7%)</div>
-            <div class="metric-subtext">Por pedido suelto de $34</div>
-          </div>
-          <div class="metric-cameo">
-            <div class="metric-label">ROAS Mínimo Break-Even</div>
-            <div class="metric-value" id="tueste-val-roasbe">2.14x</div>
-            <div class="metric-subtext">1 / Margen de contribución</div>
-          </div>
-          <div class="metric-cameo">
-            <div class="metric-label">CAC Real (Pauta + Fee)</div>
-            <div class="metric-value" id="tueste-val-cacreal">$54.55</div>
-            <div class="metric-subtext">($8,000 + $1,000) / 165 clientes</div>
-          </div>
-          <div class="metric-cameo">
-            <div class="metric-label">LTV a 12 Meses</div>
-            <div class="metric-value" id="tueste-val-ltv">$54.80</div>
-            <div class="metric-subtext">85% sueltos ($47.67) + 15% sub ($95.18)</div>
-          </div>
-        </div>
-
-        <div class="callout-box solution-box">
-          <div class="callout-title">Recomendación Ejecutiva de Una Página: Rechazar Propuesta de la Agencia</div>
-          <p style="font-size: 0.92rem; color: var(--color-chocolate-deep); margin-bottom: 0.5rem;">
-            <strong>Diagnóstico de la trampa:</strong> La agencia argumenta que el ROAS de 3.0x justifica duplicar a $16,000 con un 30% de descuento. 
-            Sin embargo, el <strong>ROAS Real del primer pedido es de solo 0.70x</strong>. Cada cliente nuevo con descuento deja apenas $6.15 de margen y cuesta $72.34 en captación (déficit de -$66.19 al entrar). 
-            Duplicar la pauta quema los $35,000 de tesorería y perfora el piso de seguridad de $5,000 en el Mes 3.
-          </p>
-          <p style="font-size: 0.92rem; color: var(--color-chocolate-deep);">
-            <strong>Nuestra Solución Maestra:</strong> 1) Reducir la pauta en Meta a $6,000 mensuales y cancelar el fee de la agencia ($1,000) reenfocando la pauta en captación limpia. 
-            2) Lanzar el Pack de 3 bolsas a $48 y elevar suscriptores al 28%. 
-            Resultado: <strong>+$158,285 en banco al Mes 24 y compra de la tostadora ($14,000) en el Mes 5</strong> sin recurrir a deuda.
-          </p>
-        </div>
-
-        <!-- Fila Verificada a Mano -->
-        <div class="hand-verified-card">
-          <h4 style="font-family: var(--font-serif); margin-bottom: 0.75rem;">Fila Verificada a Mano: CAC Real y Déficit de Caja Inicial</h4>
-          <div class="step-math-row">
-            <span>1. Inversión Total en Adquisición:</span>
-            <span class="math-formula">$8,000 (Meta) + $1,000 (Fee Agencia) = $9,000.00</span>
-          </div>
-          <div class="step-math-row">
-            <span>2. Clientes Nuevos Reales (Encuesta y UTM):</span>
-            <span class="math-formula">165 clientes nuevos</span>
-          </div>
-          <div class="step-math-row">
-            <span>3. CAC Real Unitario:</span>
-            <span class="math-formula">$9,000 / 165 = $54.5454... ≈ $54.55</span>
-          </div>
-          <div class="step-math-row">
-            <span>4. Margen Primer Pedido Ponderado (85% suelto, 15% sub):</span>
-            <span class="math-formula">(0.85 × $15.89) + (0.15 × $12.64) = $15.40</span>
-          </div>
-          <div class="step-math-row">
-            <span>5. Déficit de Tesorería por Cliente Nuevo al Firmar:</span>
-            <span class="math-formula">$15.40 - $54.55 = -$39.15 por cliente</span>
-          </div>
-        </div>
-
-        <div class="callout-box" style="margin-top: 1rem; border-left-color: var(--color-chocolate-milk);">
-          <strong style="font-size: 0.88rem; color: var(--color-chocolate-deep);">En qué se equivocó o nos confundió la IA:</strong>
-          <p style="font-size: 0.84rem; color: var(--color-text-secondary); margin-top: 0.25rem;">
-            La IA asumió ciegamente que el ROAS 3.0x de Meta multiplicaba las ventas netas por 3, sin notar que Meta incluía 315 ventas de retargeting de compradores antiguos y visitantes previos. 
-            Asimismo, calculó el LTV aplicando una fórmula perpetua infinita (Margen / Churn = $140.44) omitiendo que el 85% de los clientes hacen compras sueltas y que el horizonte fijado es de 12 meses.
-          </p>
-        </div>
-      </div>
-
-      <!-- NIVEL 2: TABLERO INTERACTIVO EN VIVO -->
-      <div class="ornate-card">
-        <div class="ornate-card-header">
-          <div class="card-title-group">
-            <span class="level-badge level-2">Nivel 2 · Tablero Interactivo en Vivo</span>
-            <h2>Controles de Simulación y Visualización de la Trampa: Tueste</h2>
-            <p>Mueva los controles deslizantes para auditar el impacto reactivo e inmediato en los unit economics</p>
-          </div>
-          <div style="display: flex; gap: 0.75rem; align-items: center;">
-            <span class="badge-status" id="tueste-semaforo-ltv">LTV:CAC</span>
-          </div>
-        </div>
-
-        <div class="grid-2">
-          <!-- Controles Deslizantes -->
-          <div class="control-panel">
-            <h4 style="font-family: var(--font-serif); margin-bottom: 1rem; font-size: 1.05rem;">Parámetros Editables de Tueste</h4>
-            
-            <div class="control-group">
-              <div class="control-label-row">
-                <span class="control-label">Inversión en Meta Ads:</span>
-                <span class="control-value-badge" id="badge-tueste-inv">$8,000</span>
-              </div>
-              <input type="range" class="ornate-slider" id="slider-tueste-inv" min="0" max="20000" step="1000" value="8000">
-            </div>
-
-            <div class="control-group">
-              <div class="control-label-row">
-                <span class="control-label">Costo de Envío por Pedido:</span>
-                <span class="control-value-badge" id="badge-tueste-envio">$4.50</span>
-              </div>
-              <input type="range" class="ornate-slider" id="slider-tueste-envio" min="2.00" max="8.00" step="0.25" value="4.50">
-            </div>
-
-            <div class="control-group">
-              <div class="control-label-row">
-                <span class="control-label">Porcentaje de Suscriptores:</span>
-                <span class="control-value-badge" id="badge-tueste-sub">15%</span>
-              </div>
-              <input type="range" class="ornate-slider" id="slider-tueste-sub" min="5" max="50" step="1" value="15">
-            </div>
-
-            <div class="control-group">
-              <div class="control-label-row">
-                <span class="control-label">Descuento en Primer Pedido:</span>
-                <span class="control-value-badge" id="badge-tueste-desc">0%</span>
-              </div>
-              <input type="range" class="ornate-slider" id="slider-tueste-desc" min="0" max="40" step="5" value="0">
-            </div>
+      <div class="coquette-topic-bar">
+        <div class="topic-bar-inner">
+          <div class="case-identity-banner">
+            <svg class="bow-decoration"><use href="#coquette-black-bow"/></svg>
+            <h2>Caso B: Agendo</h2>
+            <span class="case-question">SaaS B2B para Barberías · Banco inicial: $60.000 · Piso: $10.000 · Base: 1.150 barberías</span>
           </div>
 
-          <!-- Métricas en Vivo -->
-          <div class="grid-2">
-            <div class="metric-cameo">
-              <div class="metric-label">Ratio LTV : CAC Real</div>
-              <div class="metric-value" id="tueste-val-ltvcac">1.00x</div>
-              <div class="metric-subtext">Equilibrio precario actual</div>
-            </div>
-            <div class="metric-cameo">
-              <div class="metric-label">ROAS Real Primer Pedido</div>
-              <div class="metric-value" id="tueste-val-roasreal">0.70x</div>
-              <div class="metric-subtext">Facturación real nueva / Pauta</div>
-            </div>
-            <div class="metric-cameo">
-              <div class="metric-label">Meses para Payback</div>
-              <div class="metric-value" id="tueste-val-payback">11 meses</div>
-              <div class="metric-subtext">Tiempo de retorno de caja</div>
-            </div>
-            <div class="metric-cameo">
-              <div class="metric-label">Déficit Inicial por Cliente</div>
-              <div class="metric-value" style="color: #991b1b;">-$39.14</div>
-              <div class="metric-subtext">Absorción en el Mes 1</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Galería de Gráficos Nivel 2 -->
-        <div class="grid-3" style="margin-top: 1.5rem;">
-          <div class="chart-gallery-card">
-            <div class="chart-header">
-              <div class="chart-title">La Trampa de ROAS</div>
-              <div class="chart-subtitle">Meta reportado vs Break-Even vs Real</div>
-            </div>
-            <div class="chart-canvas-wrapper">
-              <canvas id="chart-tueste-trap"></canvas>
-            </div>
-          </div>
-
-          <div class="chart-gallery-card">
-            <div class="chart-header">
-              <div class="chart-title">Curva de Caja del Cliente</div>
-              <div class="chart-subtitle">Evolución acumulada mes 0 al 12</div>
-            </div>
-            <div class="chart-canvas-wrapper">
-              <canvas id="chart-tueste-cashcurve"></canvas>
-            </div>
-          </div>
-
-          <div class="chart-gallery-card">
-            <div class="chart-header">
-              <div class="chart-title">LTV frente a CAC Real</div>
-              <div class="chart-subtitle">Retorno a 12 meses por cliente</div>
-            </div>
-            <div class="chart-canvas-wrapper">
-              <canvas id="chart-tueste-ltvcac"></canvas>
-            </div>
+          <div class="part-plaques-group" data-case-group="agendo">
+            <button class="topic-plaque-btn active" data-part="agendo-part-1">
+              <span class="plaque-script">Parte 1 · Nivel 1</span>
+              <span class="plaque-sub">Calculadora y Escenarios</span>
+            </button>
+            <button class="topic-plaque-btn" data-part="agendo-part-2">
+              <span class="plaque-script">Parte 2 · Nivel 2</span>
+              <span class="plaque-sub">Tablero Interactivo</span>
+            </button>
+            <button class="topic-plaque-btn" data-part="agendo-part-3">
+              <span class="plaque-script">Parte 3 · Nivel 3</span>
+              <span class="plaque-sub">Simulador 24m en Tiempo Real</span>
+            </button>
           </div>
         </div>
       </div>
 
-      <!-- NIVEL 3: SIMULADOR DE CAJA DE 24 MESES -->
-      <div class="ornate-card">
-        <div class="ornate-card-header">
-          <div class="card-title-group">
-            <span class="level-badge level-3">Nivel 3 · Simulador de Tesorería a 24 Meses</span>
-            <h2>Proyección Financiera y Trayectoria de Caja: Tueste</h2>
-            <p>Seleccione un plan estratégico para comparar la trayectoria de saldo bancario frente al piso de seguridad ($5,000)</p>
+      <!-- CASO B · PARTE 1 -->
+      <div id="agendo-part-1" class="part-panel active">
+        <div class="coquette-slide-frame">
+          <div class="doily-canvas">
+            <div class="slide-part-header">
+              <div class="slide-title-block">
+                <h3 class="slide-script-heading">Nivel 1 · La calculadora de Agendo</h3>
+                <span class="slide-subtitle-italic">CAC Blended vs CAC Paid real, CAC marginal de triplicar a $30.000 y Jugada Maestra</span>
+              </div>
+              <span class="status-pill good">Jugada Maestra: Clavar $10k (100% cupo Mariela) + 25% Anual ($240) -> Subir a $15k en M5</span>
+            </div>
+
+            <div class="grid-4" style="margin-bottom: 0.8rem;">
+              <div class="cameo-metric-box">
+                <div class="m-label">Margen Mensual ($25 × 78%)</div>
+                <div class="m-val">$19,50 / mes</div>
+                <div class="m-note">Plan anual ($240): $187,20 el Día 1</div>
+              </div>
+              <div class="cameo-metric-box dark-plaque">
+                <div class="m-label">La Trampa · CAC Blended vs Paid</div>
+                <div class="m-val">$105 vs $180</div>
+                <div class="m-note">Mezcló 50 orgánicos gratis con 70 de ads</div>
+              </div>
+              <div class="cameo-metric-box">
+                <div class="m-label">LTV a 24 Meses (Churn 6%)</div>
+                <div class="m-val">$251,30</div>
+                <div class="m-note">12,89 meses activos (sin tope da $325)</div>
+              </div>
+              <div class="cameo-metric-box">
+                <div class="m-label">CAC Marginal a $30.000</div>
+                <div class="m-val">$398,57</div>
+                <div class="m-note">Pierde -$147,27 por cada cliente extra</div>
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div>
+                <div class="inner-subtabs" data-subtab-group="agendo-p1">
+                  <button class="subtab-pill active" data-subpane="bp1-escenarios">1. Tres Escenarios Lado a Lado</button>
+                  <button class="subtab-pill" data-subpane="bp1-mano">2. Fila Verificada a Mano</button>
+                </div>
+
+                <div id="bp1-escenarios" class="subtab-pane active">
+                  <div class="table-box">
+                    <table class="coq-table">
+                      <thead>
+                        <tr>
+                          <th>Indicador</th>
+                          <th>Hoy ($10.000)</th>
+                          <th>Valeria ($30.000)</th>
+                          <th>Jugada Maestra ($10k->$15k + Anual)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><strong>Trials de anuncios</strong></td>
+                          <td>500 trials (tope exacto)</td>
+                          <td>900 trials (no 1.500)</td>
+                          <td>500 (M1-4) -> 650 (M5-24)</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Vendedoras ($1.200 c/u, máx 500)</strong></td>
+                          <td>1 (Mariela: 100% cupo)</td>
+                          <td>2 vendedoras ($2.400)</td>
+                          <td>1 en M1-4 ($0 extra) -> 2 en M5-24</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Clientes nuevos (Ads + 50 org.)</strong></td>
+                          <td>70 ads + 50 org = 120</td>
+                          <td>126 ads + 50 org = 176</td>
+                          <td>90 ads (M1-4) -> 117 ads (M5-24) + 50</td>
+                        </tr>
+                        <tr>
+                          <td><strong>CAC Blended vs CAC Paid Real</strong></td>
+                          <td>$105,00 / <strong>$180,00</strong></td>
+                          <td>$198,41 / <strong>$277,14</strong></td>
+                          <td>$92,86 / <strong>$144,44</strong> (M1-4)</td>
+                        </tr>
+                        <tr>
+                          <td><strong>CAC Marginal</strong></td>
+                          <td>Base ($10.000)</td>
+                          <td><strong>$398,57</strong> ($22.320 ÷ 56)</td>
+                          <td>$144,44 en Etapa 1</td>
+                        </tr>
+                        <tr>
+                          <td><strong>LTV a 24 meses</strong></td>
+                          <td>$251,30 (churn 6%)</td>
+                          <td>$251,30 (churn 6%)</td>
+                          <td><strong>$289,70</strong> (churn 4,5%)</td>
+                        </tr>
+                        <tr class="row-winner">
+                          <td><strong>LTV:CAC Paid y Payback</strong></td>
+                          <td>1,40x · Mes 12</td>
+                          <td>0,91x · Nunca recupera</td>
+                          <td><strong>2,01x · Día 1 en Plan Anual (M3 mix)</strong></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div id="bp1-mano" class="subtab-pane">
+                  <div class="coq-info-card">
+                    <h4>Cuentas Verificadas a Mano</h4>
+                    <div class="hand-calc-list">
+                      <div class="hand-calc-row">
+                        <span>Costo total adquisición hoy:</span>
+                        <code>$10.000 (ads) + $1.200 (Mariela) + (70 × $20 com.) = $12.600</code>
+                      </div>
+                      <div class="hand-calc-row">
+                        <span>CAC Blended vs CAC Paid Real:</span>
+                        <code>$12.600 ÷ 120 = $105,00 | $12.600 ÷ 70 = $180,00</code>
+                      </div>
+                      <div class="hand-calc-row">
+                        <span>Costo total con $30.000:</span>
+                        <code>$30.000 + $2.400 (2 vend.) + (126 × $20) = $34.920</code>
+                      </div>
+                      <div class="hand-calc-row">
+                        <span>CAC Marginal ($10k a $30k):</span>
+                        <code>($34.920 - $12.600) ÷ (126 - 70) = $22.320 ÷ 56 = $398,57</code>
+                      </div>
+                      <div class="hand-calc-row">
+                        <span>Payback Plan Anual ($240):</span>
+                        <code>Deja $240 × 78% = $187,20 el Día 1 vs $180 CAC = +$7,20 en Día 1</code>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="display:flex; flex-direction:column; gap:0.7rem;">
+                <div class="coq-info-card trap-highlight">
+                  <h4>Radiografía Numérica de la Trampa de Valeria</h4>
+                  <ul>
+                    <li><strong>50 clientes gratis escondidos en el CAC:</strong> Valeria dividió $12.600 entre 120 clientes ($105), pero 50 vinieron gratis por el sello <em>«Reservado con Agendo»</em>. Los anuncios solo trajeron 70 clientes: <strong>el CAC Paid real es $180,00</strong>.</li>
+                    <li><strong>CAC marginal asesino de $398,57:</strong> Al triplicar a $30.000 los trials solo suben de 500 a 900 (+56 clientes) y obligan a pagar una 2da vendedora ($1.200). Cada cliente extra cuesta $398,57 frente a un LTV a 24 meses de $251,30.</li>
+                  </ul>
+                </div>
+
+                <div class="coquette-oval-callout">
+                  <h4 style="font-family:var(--font-editorial); font-size:1.05rem; color:var(--coq-choco-deep); margin-bottom:0.25rem;">
+                    Jugada Maestra Ganadora (Tope de Mariela + Payback Día 1)
+                  </h4>
+                  <ul style="font-size:0.8rem; color:var(--coq-choco-deep); padding-left:1.1rem; line-height:1.42;">
+                    <li><strong>Etapa 1 (Meses 1 a 4 · $10.000 exactos):</strong> Con $10.000 llegan exactamente 500 trials (100% del cupo de Mariela, <strong>$0 en 2da vendedora</strong>). Con onboarding por WhatsApp (18% conversión = 90 clientes de ads) el CAC Paid cae de <strong>$180 a $144,44</strong>. Y al cobrar el <strong>Plan Anual ($240) al 25%</strong>, cada cliente anual deja $187,20 el día 1 (se paga solo de contado).</li>
+                    <li><strong>Etapa 2 (Meses 5 a 24 · $15.000/mes):</strong> Con $88.000 ya acumulados en el banco, contratar a la 2da vendedora y subir a $15.000/mes para cerrar el Mes 24 con <strong>$388.420 en caja</strong> y <strong>2.295 barberías activas</strong>.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
           </div>
-        </div>
-
-        <!-- Selector de Planes -->
-        <div class="plan-pill-selector">
-          <button class="plan-pill-btn plan-btn-tueste active" data-plan="actual">Plan 1: Actual ($8,000 fijos)</button>
-          <button class="plan-pill-btn plan-btn-tueste" data-plan="agency">Plan 2: Propuesta Agencia ($16,000 + 30% desc)</button>
-          <button class="plan-pill-btn plan-btn-tueste" data-plan="conservative">Plan 3: Conservador ($4,000 sin agencia)</button>
-          <button class="plan-pill-btn plan-btn-tueste" data-plan="master">Plan 4: Solución Maestra ($6,000 + Pack $48)</button>
-        </div>
-
-        <div class="chart-gallery-card" style="margin-bottom: 1.5rem;">
-          <div class="chart-header">
-            <div class="chart-title">Evolución del Saldo Bancario en 24 Meses</div>
-            <div class="chart-subtitle">Comparativa frente al piso de seguridad ($5,000)</div>
-          </div>
-          <div class="chart-canvas-wrapper large-wrapper">
-            <canvas id="chart-tueste-sim24m"></canvas>
-          </div>
-        </div>
-
-        <!-- Tabla de 24 Meses -->
-        <div class="table-responsive">
-          <table class="editorial-table">
-            <thead>
-              <tr>
-                <th>Mes</th>
-                <th>Inversión Meta</th>
-                <th>Clientes Nuevos</th>
-                <th>Suscriptores Activos</th>
-                <th>Contrib. Actuales</th>
-                <th>Contrib. Nuevos</th>
-                <th>Entradas Totales</th>
-                <th>Salidas Totales</th>
-                <th>Flujo Neto</th>
-                <th>Caja Final</th>
-                <th>Alerta</th>
-              </tr>
-            </thead>
-            <tbody id="tbody-tueste-24m">
-              <!-- Filas generadas dinámicamente por JavaScript -->
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Pitch Ejecutivo de 2 Minutos -->
-        <div class="callout-box solution-box" style="margin-top: 1.5rem;">
-          <div class="callout-title">Pitch Ejecutivo de 2 Minutos (Presentación ante el Tío Prestamista)</div>
-          <blockquote style="font-style: italic; font-size: 0.92rem; color: var(--color-chocolate-deep); line-height: 1.6;">
-            «Tío, Tueste es una empresa con una marca de culto, 1,100 reseñas y 4.8 estrellas. Estuvimos a días de firmar un contrato de $16,000 al mes que nos habría llevado a la quiebra en tres meses porque la agencia nos mostraba un ROAS inflado de 3.0x adjudicándose recompras de clientes viejos.<br><br>
-            Hoy hemos descubierto la trampa: cancelamos los honorarios de la agencia, fijamos la inversión en $6,000 mensuales en captación limpia y lanzamos el Pack de $48 aumentando la suscripción. Esto nos permite pagar la segunda tostadora de $14,000 de contado en el Mes 5, mantener siempre un colchón de seguridad superior a $24,000 y acumular más de $158,000 de caja al Mes 24. No necesitamos subsidio de capital para tapar fugas, sino para comprar maquinaria productiva.»
-          </blockquote>
         </div>
       </div>
+
+      <!-- CASO B · PARTE 2 -->
+      <div id="agendo-part-2" class="part-panel">
+        <div class="coquette-slide-frame chocolate-slide">
+          <div class="doily-canvas">
+            <div class="slide-part-header">
+              <div class="slide-title-block">
+                <h3 class="slide-script-heading">Nivel 2 · El tablero de Agendo</h3>
+                <span class="slide-subtitle-italic">Simulación interactiva de CAC Paid, CAC Marginal, vendedoras y curva J</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:0.6rem;">
+                <span class="status-pill warn" id="agendo-semaforo-ltv">LTV:CAC Paid 1,40x</span>
+                <button class="btn-coq-reset" id="btn-agendo-reset">Volver a datos del caso</button>
+              </div>
+            </div>
+
+            <div class="grid-4" style="margin-bottom: 0.75rem;">
+              <div class="cameo-metric-box">
+                <div class="m-label">CAC Blended vs CAC Paid</div>
+                <div class="m-val"><span id="agendo-val-cacblended">$105,00</span> / <span id="agendo-val-cacpaid">$180,00</span></div>
+                <div class="m-note">Vendedoras: <strong id="agendo-val-vendedoras">1 (100% cupo)</strong></div>
+              </div>
+              <div class="cameo-metric-box dark-plaque">
+                <div class="m-label">CAC Marginal Tramo</div>
+                <div class="m-val" id="agendo-val-cacmarginal">$196,21</div>
+                <div class="m-note">Clientes ads: <strong id="agendo-val-cads">70,0</strong> + 50 org.</div>
+              </div>
+              <div class="cameo-metric-box">
+                <div class="m-label">LTV 24m vs LTV sin tope</div>
+                <div class="m-val" id="agendo-val-ltv24m">$251,30</div>
+                <div class="m-note">Sin tope de meses: <strong id="agendo-val-ltvinf">$325,00</strong></div>
+              </div>
+              <div class="cameo-metric-box">
+                <div class="m-label">LTV:CAC Paid y Payback</div>
+                <div class="m-val"><span id="agendo-val-ltvcacpaid">1,40x</span> · <span id="agendo-val-payback">12m</span></div>
+                <div class="m-note">Plan anual ($240): Payback Día 1</div>
+              </div>
+            </div>
+
+            <div class="grid-lvl2-layout">
+              <div class="sliders-box">
+                <h4 style="font-family:var(--font-editorial); font-size:0.98rem; color:var(--coq-choco-deep); margin-bottom:0.45rem;">
+                  Controles del modelo de Agendo
+                </h4>
+                <div class="sliders-grid-2col">
+                  <div class="slider-item full-span">
+                    <div class="slider-top-row">
+                      <span class="slider-name">Inversión en Anuncios ($0 a $30.000)</span>
+                      <span class="slider-val-pill" id="badge-agendo-inv">$10.000</span>
+                    </div>
+                    <input type="range" class="coq-range" id="slider-agendo-inv" min="0" max="30000" step="1000" value="10000">
+                  </div>
+
+                  <div class="slider-item">
+                    <div class="slider-top-row">
+                      <span class="slider-name">Conversión Trial (%)</span>
+                      <span class="slider-val-pill" id="badge-agendo-conv">14%</span>
+                    </div>
+                    <input type="range" class="coq-range" id="slider-agendo-conv" min="8" max="26" step="1" value="14">
+                  </div>
+
+                  <div class="slider-item">
+                    <div class="slider-top-row">
+                      <span class="slider-name">Cancelación (Churn)</span>
+                      <span class="slider-val-pill" id="badge-agendo-churn">6,0%</span>
+                    </div>
+                    <input type="range" class="coq-range" id="slider-agendo-churn" min="2" max="12" step="0.5" value="6">
+                  </div>
+
+                  <div class="slider-item">
+                    <div class="slider-top-row">
+                      <span class="slider-name">Precio mensual ($)</span>
+                      <span class="slider-val-pill" id="badge-agendo-precio">$25</span>
+                    </div>
+                    <input type="range" class="coq-range" id="slider-agendo-precio" min="18" max="40" step="1" value="25">
+                  </div>
+
+                  <div class="slider-item">
+                    <div class="slider-top-row">
+                      <span class="slider-name">% en Plan Anual ($240)</span>
+                      <span class="slider-val-pill" id="badge-agendo-anual">0%</span>
+                    </div>
+                    <input type="range" class="coq-range" id="slider-agendo-anual" min="0" max="40" step="5" value="0">
+                  </div>
+                </div>
+              </div>
+
+              <div class="charts-grid-2x2">
+                <div class="chart-frame">
+                  <div class="chart-frame-head">
+                    <span class="chart-frame-title">1. La Trampa de Valeria (LTV:CAC)</span>
+                    <span class="chart-frame-sub">Blended (2,4x) vs Paid Real vs Marginal</span>
+                  </div>
+                  <div class="canvas-box-sm">
+                    <canvas id="chart-agendo-trap"></canvas>
+                  </div>
+                </div>
+
+                <div class="chart-frame">
+                  <div class="chart-frame-head">
+                    <span class="chart-frame-title">2. Curva de Caja del Cliente (M0 a M24)</span>
+                    <span class="chart-frame-sub">Mensual ($25/mes) vs Anual ($240 Día 1)</span>
+                  </div>
+                  <div class="canvas-box-sm">
+                    <canvas id="chart-agendo-cashcurve"></canvas>
+                  </div>
+                </div>
+
+                <div class="chart-frame">
+                  <div class="chart-frame-head">
+                    <span class="chart-frame-title">3. LTV frente a CAC Paid y Umbrales</span>
+                    <span class="chart-frame-sub">Con líneas de umbral 1:1 y 3:1</span>
+                  </div>
+                  <div class="canvas-box-sm">
+                    <canvas id="chart-agendo-ltvcac"></canvas>
+                  </div>
+                </div>
+
+                <div class="chart-frame">
+                  <div class="chart-frame-head">
+                    <span class="chart-frame-title">4. Trials y CAC Marginal por Tramo</span>
+                    <span class="chart-frame-sub">Saturación de anuncios ($0 a $30.000)</span>
+                  </div>
+                  <div class="canvas-box-sm">
+                    <canvas id="chart-agendo-marginal"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO B · PARTE 3 (SIMULADOR 24 MESES EN TIEMPO REAL) -->
+      <div id="agendo-part-3" class="part-panel">
+        <div class="coquette-slide-frame">
+          <div class="doily-canvas">
+
+            <div class="realtime-investor-bar">
+              <div class="rt-controls-row">
+                <div class="rt-input-group">
+                  <label class="rt-input-label" for="agendo-rt-inv-num">Anuncios M1 a M4:</label>
+                  <div class="rt-money-field">
+                    <span>$</span>
+                    <input type="number" id="agendo-rt-inv-num" class="rt-number-input" min="0" max="30000" step="500" value="10000">
+                  </div>
+                  <input type="range" id="agendo-rt-inv-slider" class="coq-range rt-slider-inline" min="0" max="30000" step="500" value="10000">
+
+                  <label class="rt-input-label" for="agendo-rt-inv2-num" style="margin-left:0.35rem;">M5 a M24:</label>
+                  <div class="rt-money-field">
+                    <span>$</span>
+                    <input type="number" id="agendo-rt-inv2-num" class="rt-number-input" min="0" max="30000" step="500" value="15000">
+                  </div>
+                  <input type="range" id="agendo-rt-inv2-slider" class="coq-range rt-slider-inline" min="0" max="30000" step="500" value="15000">
+                </div>
+
+                <div class="rt-toggles-group">
+                  <label class="rt-check-chip">
+                    <input type="checkbox" id="agendo-rt-onboard" checked>
+                    <span>Onboarding WhatsApp (18% conv / 4,5% churn)</span>
+                  </label>
+                  <label class="rt-check-chip">
+                    <input type="checkbox" id="agendo-rt-annual" checked>
+                    <span>25% en Plan Anual ($240 Día 1)</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="preset-plans-row">
+                <span class="preset-label">Cargar plan en tiempo real:</span>
+                <button class="preset-btn plan-btn-agendo" data-plan="actual">Plan 1: Hoy ($10.000 fijos)</button>
+                <button class="preset-btn plan-btn-agendo" data-plan="valeria">Plan 2: Valeria ($30.000 fijos)</button>
+                <button class="preset-btn plan-btn-agendo" data-plan="conservative">Plan 3: Propio Fijo ($12.000 + Anual)</button>
+                <button class="preset-btn plan-btn-agendo winner-btn active" data-plan="master">Plan 4: Jugada Maestra ($10k Cupo Mariela -> $15k + 25% Anual)</button>
+              </div>
+            </div>
+
+            <div id="agendo-rt-verdict" class="verdict-live-banner good">
+              <div class="verdict-main-text">
+                <strong class="verdict-headline" id="agendo-verdict-title">SÍ ES BUENO PARA INVERTIR — JUGADA MAESTRA ÓPTIMA</strong>
+                <p class="verdict-explanation" id="agendo-verdict-desc">
+                  Aprovecha el 100% del cupo de Mariela en M1-M4 sin pagar 2da vendedora, cobra 25% anual en Día 1 y escala a $15k en M5.
+                </p>
+              </div>
+              <div class="verdict-kpis">
+                <div class="verdict-kpi-pill">
+                  <small>Caja Mínima</small>
+                  <strong id="agendo-vkpi-min">$60.000 (M0)</strong>
+                </div>
+                <div class="verdict-kpi-pill">
+                  <small>Caja Mes 24</small>
+                  <strong id="agendo-vkpi-final">$388.420</strong>
+                </div>
+                <div class="verdict-kpi-pill">
+                  <small>Barberías M24</small>
+                  <strong id="agendo-vkpi-subs">2.295 activas</strong>
+                </div>
+                <div class="verdict-kpi-pill">
+                  <small>CAC Paid Real</small>
+                  <strong id="agendo-vkpi-cac">$144,44</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-sim-layout">
+              <div class="chart-frame">
+                <div class="chart-frame-head">
+                  <span class="chart-frame-title">Gráfica en Tiempo Real: Saldo Bancario de Agendo (Mes 0 al 24)</span>
+                  <span class="chart-frame-sub">Tu inversión en vivo frente a Hoy ($10k), Valeria ($30k) y el Piso ($10.000)</span>
+                </div>
+                <div class="canvas-box-lg">
+                  <canvas id="chart-agendo-sim24m"></canvas>
+                </div>
+              </div>
+
+              <div>
+                <div class="inner-subtabs" data-subtab-group="agendo-p3">
+                  <button class="subtab-pill active" data-subpane="bp3-planes">Comparar 4 Planes</button>
+                  <button class="subtab-pill" data-subpane="bp3-tabla24">Tabla 24 Meses (En Vivo)</button>
+                  <button class="subtab-pill" data-subpane="bp3-mes1">Revisión Mes 1 ($10k)</button>
+                </div>
+
+                <div id="bp3-planes" class="subtab-pane active">
+                  <div class="table-box">
+                    <table class="coq-table">
+                      <thead>
+                        <tr>
+                          <th>Plan (24 Meses)</th>
+                          <th>Inversión/mes</th>
+                          <th>Caja Mínima (Mes)</th>
+                          <th>Caja Mes 24</th>
+                          <th>Clientes M24</th>
+                        </tr>
+                      </thead>
+                      <tbody id="tbody-agendo-compare"></tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div id="bp3-tabla24" class="subtab-pane">
+                  <div class="table-box scroll-y">
+                    <table class="coq-table">
+                      <thead>
+                        <tr>
+                          <th>Mes</th>
+                          <th>Ads</th>
+                          <th>Trials</th>
+                          <th>Vend.</th>
+                          <th>Nuevos</th>
+                          <th>Activos</th>
+                          <th>Entradas</th>
+                          <th>Salidas</th>
+                          <th>Caja Final</th>
+                        </tr>
+                      </thead>
+                      <tbody id="tbody-agendo-24m"></tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div id="bp3-mes1" class="subtab-pane">
+                  <div class="coq-info-card">
+                    <h4>Revisión del Mes 1 a Mano (Plan de $10.000 fijos)</h4>
+                    <div class="hand-calc-list">
+                      <div class="hand-calc-row">
+                        <span>1. Clientes que siguen activos:</span>
+                        <code>1.150 × (1 - 0,06) = 1.081 clientes</code>
+                      </div>
+                      <div class="hand-calc-row">
+                        <span>2. Clientes nuevos del Mes 1:</span>
+                        <code>(500 trials × 14% = 70 de ads) + 50 orgánicos = 120</code>
+                      </div>
+                      <div class="hand-calc-row">
+                        <span>3. Total clientes activos Mes 1:</span>
+                        <code>1.081 + 120 = 1.201 barberías</code>
+                      </div>
+                      <div class="hand-calc-row">
+                        <span>4. Entradas del Mes 1:</span>
+                        <code>1.201 × ($25 × 78% = $19,50) = $23.419,50</code>
+                      </div>
+                      <div class="hand-calc-row">
+                        <span>5. Salidas del Mes 1:</span>
+                        <code>$10.000 (ads) + $1.200 (1 vend.) + $1.400 (com.) + $14.000 = $26.600</code>
+                      </div>
+                      <div class="hand-calc-row">
+                        <span>6. Caja final Mes 1:</span>
+                        <code>$60.000 + $23.419,50 - $26.600 = $56.819,50 (-$3.180,50)</code>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
     </section>
 
+    <!-- ================================================================== -->
+    <!-- PESTAÑA 3: CASO C · SOL DE CASA                                    -->
+    <!-- ================================================================== -->
+    <section id="case-soldecasa" class="case-section">
 
-    <!-- ============================================================== -->
-    <!-- PESTAÑA 3: CASO B · AGENDO (SAAS B2B)                           -->
-    <!-- ============================================================== -->
-    <section id="tab-agendo" class="tab-content brand-theme-agendo">
-      
-      <!-- NIVEL 1: CALCULADORA Y RECOMENDACIÓN -->
-      <div class="ornate-card">
-        <div class="ornate-card-header">
-          <div class="card-title-group">
-            <span class="level-badge level-1">Nivel 1 · Calculadora y Rigor Numérico</span>
-            <h2>Diagnóstico Estratégico y Auditoría de Unit Economics: Agendo</h2>
-            <p>Auditoría del reporte trimestral de Valeria y evaluación de la solicitud de triplicar ads</p>
-          </div>
-          <button class="btn-ornate-secondary" id="btn-agendo-reset">Restablecer Datos Base</button>
-        </div>
-
-        <div class="grid-4" style="margin-bottom: 1.5rem;">
-          <div class="metric-cameo">
-            <div class="metric-label">CAC Blended (Valeria)</div>
-            <div class="metric-value" id="agendo-val-cacblended">$105.00</div>
-            <div class="metric-subtext">Dividido entre 120 clientes</div>
-          </div>
-          <div class="metric-cameo">
-            <div class="metric-label">CAC Paid Real (Anuncios)</div>
-            <div class="metric-value" id="agendo-val-cacpaid">$180.00</div>
-            <div class="metric-subtext">Dividido entre 70 clientes de pauta</div>
-          </div>
-          <div class="metric-cameo">
-            <div class="metric-label">LTV a 24 Meses</div>
-            <div class="metric-value" id="agendo-val-ltv24m">$251.30</div>
-            <div class="metric-subtext">Retención acumulada 12.89 meses</div>
-          </div>
-          <div class="metric-cameo">
-            <div class="metric-label">LTV:CAC Paid Real</div>
-            <div class="metric-value" id="agendo-val-ltvcacpaid">1.40x</div>
-            <div class="metric-subtext">Muy por debajo del 2.4x alegado</div>
-          </div>
-        </div>
-
-        <div class="callout-box solution-box">
-          <div class="callout-title">Recomendación Ejecutiva de Una Página: Arreglar Antes de Escalar</div>
-          <p style="font-size: 0.92rem; color: var(--color-chocolate-deep); margin-bottom: 0.5rem;">
-            <strong>Diagnóstico de la trampa:</strong> Valeria asegura que el CAC es $105 y que cada dólar vuelve 2.4 veces. 
-            Sin embargo, <strong>ocultó que 50 de los 120 clientes llegaron gratis por boca a boca</strong>. El cliente de pauta cuesta en realidad $180. 
-            Además, si se triplica la pauta a $30,000, los trials no se triplican: suben de 500 a solo 900, requiriendo 2 vendedoras y disparando el <strong>CAC Marginal a $398.57 por cliente extra</strong>. 
-            Como el LTV es de $251.30, triplicar anuncios destruye -$147.27 netos por cada cliente nuevo, consumiendo los $60,000 de tesorería y llevando a Agendo a la quiebra en el Mes 14.
-          </p>
-          <p style="font-size: 0.92rem; color: var(--color-chocolate-deep);">
-            <strong>Nuestra Solución Maestra:</strong> 1) Topar pauta en $12,000/mes. 2) Automatizar onboarding por WhatsApp (subiendo conversión del trial del 14% al 18% y bajando churn a 4.5%). 
-            3) Impulsar el cobro anual adelantado de $240 (20% del mix). 
-            Resultado: <strong>La caja nunca baja de $58,900 y Agendo alcanza 2,174 barberías activas con +$343,890 en banco en el Mes 24</strong>.
-          </p>
-        </div>
-
-        <!-- Fila Verificada a Mano: Revisión Mes 1 -->
-        <div class="hand-verified-card">
-          <h4 style="font-family: var(--font-serif); margin-bottom: 0.75rem;">Fila Verificada a Mano: Revisión del Mes 1 ($10k fijos, sin técnicos extra)</h4>
-          <div class="step-math-row">
-            <span>1. Clientes Activos Mes 1:</span>
-            <span class="math-formula">(1,150 × 0.94) + 70 (ads) + 50 (orgánicos) = 1,081 + 120 = 1,201 clientes</span>
-          </div>
-          <div class="step-math-row">
-            <span>2. Entradas de Caja Mes 1:</span>
-            <span class="math-formula">1,201 clientes × ($25 × 0.78 = $19.50) = $23,419.50</span>
-          </div>
-          <div class="step-math-row">
-            <span>3. Salidas de Caja Mes 1:</span>
-            <span class="math-formula">$10,000 (ads) + $1,200 (Mariela) + (70 × $20 = $1,400) + $14,000 (fijos) = $26,600.00</span>
-          </div>
-          <div class="step-math-row">
-            <span>4. Flujo Neto Mes 1:</span>
-            <span class="math-formula">$23,419.50 - $26,600.00 = -$3,180.50</span>
-          </div>
-          <div class="step-math-row">
-            <span>5. Saldo Bancario Final Mes 1:</span>
-            <span class="math-formula">$60,000.00 - $3,180.50 = $56,819.50</span>
-          </div>
-        </div>
-
-        <div class="callout-box" style="margin-top: 1rem; border-left-color: var(--color-chocolate-milk);">
-          <strong style="font-size: 0.88rem; color: var(--color-chocolate-deep);">En qué se equivocó o nos confundió la IA:</strong>
-          <p style="font-size: 0.84rem; color: var(--color-text-secondary); margin-top: 0.25rem;">
-            La IA recomendó triplicar el presupuesto de ads porque tomó el CAC Blended ($105) como si fuera el costo de adquisición de los anuncios. 
-            Asimismo, asumió un crecimiento lineal de trials (1,500 trials con $30k) ignorando que el historial muestra rendimientos decrecientes (900 trials) y omitió el costo a saltos de la segunda vendedora ($1,200).
-          </p>
-        </div>
-      </div>
-
-      <!-- NIVEL 2: TABLERO INTERACTIVO EN VIVO -->
-      <div class="ornate-card">
-        <div class="ornate-card-header">
-          <div class="card-title-group">
-            <span class="level-badge level-2">Nivel 2 · Tablero Interactivo en Vivo</span>
-            <h2>Controles de Simulación y Visualización de la Trampa: Agendo</h2>
-            <p>Mueva los controles para ver el impacto en vivo sobre el CAC Paid, CAC Marginal y el semáforo LTV:CAC</p>
-          </div>
-          <div style="display: flex; gap: 0.75rem; align-items: center;">
-            <span class="badge-status" id="agendo-semaforo-ltv">LTV:CAC</span>
-          </div>
-        </div>
-
-        <div class="grid-2">
-          <div class="control-panel">
-            <h4 style="font-family: var(--font-serif); margin-bottom: 1rem; font-size: 1.05rem;">Parámetros Editables de Agendo</h4>
-            
-            <div class="control-group">
-              <div class="control-label-row">
-                <span class="control-label">Inversión en Anuncios:</span>
-                <span class="control-value-badge" id="badge-agendo-inv">$10,000</span>
-              </div>
-              <input type="range" class="ornate-slider" id="slider-agendo-inv" min="0" max="30000" step="1000" value="10000">
-            </div>
-
-            <div class="control-group">
-              <div class="control-label-row">
-                <span class="control-label">Conversión de Trial a Pago:</span>
-                <span class="control-value-badge" id="badge-agendo-conv">14%</span>
-              </div>
-              <input type="range" class="ornate-slider" id="slider-agendo-conv" min="5" max="30" step="1" value="14">
-            </div>
-
-            <div class="control-group">
-              <div class="control-label-row">
-                <span class="control-label">Cancelación Mensual (Churn):</span>
-                <span class="control-value-badge" id="badge-agendo-churn">6.0%</span>
-              </div>
-              <input type="range" class="ornate-slider" id="slider-agendo-churn" min="2" max="15" step="0.5" value="6">
-            </div>
-
-            <div class="control-group">
-              <div class="control-label-row">
-                <span class="control-label">Porcentaje en Plan Anual ($240):</span>
-                <span class="control-value-badge" id="badge-agendo-anual">0%</span>
-              </div>
-              <input type="range" class="ornate-slider" id="slider-agendo-anual" min="0" max="40" step="5" value="0">
-            </div>
+      <div class="coquette-topic-bar">
+        <div class="topic-bar-inner">
+          <div class="case-identity-banner">
+            <svg class="bow-decoration"><use href="#coquette-black-bow"/></svg>
+            <h2>Caso C: Sol de Casa</h2>
+            <span class="case-question">Paneles Solares ($6.500) · Banco inicial: $12.000 · Piso: $5.000 · Capacidad base: 100 visitas</span>
           </div>
 
-          <!-- Métricas en Vivo -->
-          <div class="grid-2">
-            <div class="metric-cameo">
-              <div class="metric-label">Vendedoras Requeridas</div>
-              <div class="metric-value" id="agendo-val-vendedoras">1 (100% cupo)</div>
-              <div class="metric-subtext">500 trials máx por persona</div>
-            </div>
-            <div class="metric-cameo">
-              <div class="metric-label">CAC Marginal Incremental</div>
-              <div class="metric-value" id="agendo-val-cacmarginal">Base ($10k)</div>
-              <div class="metric-subtext">Costo de cada cliente extra</div>
-            </div>
-            <div class="metric-cameo">
-              <div class="metric-label">Meses Payback (Paid)</div>
-              <div class="metric-value" id="agendo-val-payback">12 meses</div>
-              <div class="metric-subtext">Retorno en cliente mensual</div>
-            </div>
-            <div class="metric-cameo">
-              <div class="metric-label">Déficit Inicial por Cliente</div>
-              <div class="metric-value" style="color: #991b1b;">-$160.50</div>
-              <div class="metric-subtext">Caja atrapada Mes 1</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Galería de Gráficos Nivel 2 -->
-        <div class="grid-3" style="margin-top: 1.5rem;">
-          <div class="chart-gallery-card">
-            <div class="chart-header">
-              <div class="chart-title">La Trampa de Valeria</div>
-              <div class="chart-subtitle">LTV:CAC reportado vs Paid vs Marginal</div>
-            </div>
-            <div class="chart-canvas-wrapper">
-              <canvas id="chart-agendo-trap"></canvas>
-            </div>
-          </div>
-
-          <div class="chart-gallery-card">
-            <div class="chart-header">
-              <div class="chart-title">Curva de Caja del Cliente</div>
-              <div class="chart-subtitle">Cliente Mensual vs Prepago Anual</div>
-            </div>
-            <div class="chart-canvas-wrapper">
-              <canvas id="chart-agendo-cashcurve"></canvas>
-            </div>
-          </div>
-
-          <div class="chart-gallery-card">
-            <div class="chart-header">
-              <div class="chart-title">LTV vs CAC Paid y Blended</div>
-              <div class="chart-subtitle">Comparación de umbrales 1:1 y 3:1</div>
-            </div>
-            <div class="chart-canvas-wrapper">
-              <canvas id="chart-agendo-ltvcac"></canvas>
-            </div>
+          <div class="part-plaques-group" data-case-group="soldecasa">
+            <button class="topic-plaque-btn active" data-part="sol-part-1">
+              <span class="plaque-script">Parte 1 · Nivel 1</span>
+              <span class="plaque-sub">Calculadora y Embudo</span>
+            </button>
+            <button class="topic-plaque-btn" data-part="sol-part-2">
+              <span class="plaque-script">Parte 2 · Nivel 2</span>
+              <span class="plaque-sub">Tablero Interactivo</span>
+            </button>
+            <button class="topic-plaque-btn" data-part="sol-part-3">
+              <span class="plaque-script">Parte 3 · Nivel 3</span>
+              <span class="plaque-sub">Simulador 24m en Tiempo Real</span>
+            </button>
           </div>
         </div>
       </div>
 
-      <!-- NIVEL 3: SIMULADOR DE CAJA DE 24 MESES -->
-      <div class="ornate-card">
-        <div class="ornate-card-header">
-          <div class="card-title-group">
-            <span class="level-badge level-3">Nivel 3 · Simulador de Tesorería a 24 Meses</span>
-            <h2>Proyección Financiera y Trayectoria de Caja: Agendo</h2>
-            <p>Seleccione un plan para ver la evolución mes a mes frente al piso de seguridad ($10,000)</p>
+      <!-- CASO C · PARTE 1 -->
+      <div id="sol-part-1" class="part-panel active">
+        <div class="coquette-slide-frame">
+          <div class="doily-canvas">
+            <div class="slide-part-header">
+              <div class="slide-title-block">
+                <h3 class="slide-script-heading">Nivel 1 · La calculadora de Sol de Casa</h3>
+                <span class="slide-subtitle-italic">Embudo Meta vs Google, costo de visitas ($60), tope de 100 visitas y descalce de caja</span>
+              </div>
+              <span class="status-pill good">Jugada Maestra: 100,0% Cupo Exacto en M1-2 ($8k G + $2,6k M) -> 3er Técnico + $6k M en M3</span>
+            </div>
+
+            <div class="grid-4" style="margin-bottom: 0.8rem;">
+              <div class="cameo-metric-box">
+                <div class="m-label">Contribución Neta por Venta</div>
+                <div class="m-val">$1.625,00 (25%)</div>
+                <div class="m-note">$6.500 - 55% eq. - 17% inst. - 3% com.</div>
+              </div>
+              <div class="cameo-metric-box dark-plaque">
+                <div class="m-label">La Trampa · CAC Real por Canal</div>
+                <div class="m-val">Google $535 vs Meta $718</div>
+                <div class="m-note">Meta exige 5,56 visitas ($60 c/u) por venta</div>
+              </div>
+              <div class="cameo-metric-box">
+                <div class="m-label">Valor Neto de 1 Visita Técnica</div>
+                <div class="m-val">Google $427,50</div>
+                <div class="m-note">Meta deja solo $232,50 por visita</div>
+              </div>
+              <div class="cameo-metric-box">
+                <div class="m-label">Bache de Caja al Firmar (Mes 1)</div>
+                <div class="m-val">-$520,00 / venta</div>
+                <div class="m-note">Entra 50% ($3.250) y sale 58% ($3.770)</div>
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div>
+                <div class="inner-subtabs" data-subtab-group="sol-p1">
+                  <button class="subtab-pill active" data-subpane="cp1-embudo">1. Embudo Meta vs Google</button>
+                  <button class="subtab-pill" data-subpane="cp1-escenarios">2. Tres Escenarios Lado a Lado</button>
+                  <button class="subtab-pill" data-subpane="cp1-mano">3. Fila Verificada a Mano</button>
+                </div>
+
+                <div id="cp1-embudo" class="subtab-pane active">
+                  <div class="table-box">
+                    <table class="coq-table">
+                      <thead>
+                        <tr>
+                          <th>Paso del Embudo (Septiembre)</th>
+                          <th>Meta Ads ($4.000)</th>
+                          <th>Google Ads ($4.000)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><strong>Leads y Costo por Lead (CPL)</strong></td>
+                          <td>500 leads ($8,00 c/u)</td>
+                          <td>100 leads ($40,00 c/u)</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Contactados (% que contesta)</strong></td>
+                          <td>275 (55% · 18% tel. falso)</td>
+                          <td>85 (85% · alta intención)</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Visitas agendadas y realizadas</strong></td>
+                          <td>82,5 agend. -> <strong>57,75 hechas</strong></td>
+                          <td>46,75 agend. -> <strong>39,74 hechas</strong></td>
+                        </tr>
+                        <tr>
+                          <td><strong>Cierre en visita y Ventas cerradas</strong></td>
+                          <td>18% cierre -> <strong>10,40 ventas</strong></td>
+                          <td>30% cierre -> <strong>11,92 ventas</strong></td>
+                        </tr>
+                        <tr>
+                          <td><strong>Costo de visitas ($60 por visita hecha)</strong></td>
+                          <td>57,75 × $60 = $3.465,00</td>
+                          <td>39,74 × $60 = $2.384,25</td>
+                        </tr>
+                        <tr class="row-winner">
+                          <td><strong>CAC Real (Anuncios + Visitas ÷ Ventas)</strong></td>
+                          <td><strong>$718,13</strong> ($384,80 sin visitas)</td>
+                          <td><strong>$535,53</strong> (25,4% más barato)</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div id="cp1-escenarios" class="subtab-pane">
+                  <div class="table-box">
+                    <table class="coq-table">
+                      <thead>
+                        <tr>
+                          <th>Indicador</th>
+                          <th>Hoy ($4k M + $4k G)</th>
+                          <th>Leadly ($8k Meta + $0 G)</th>
+                          <th>Jugada Maestra ($8k G + $2,6k->$6k M)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><strong>Visitas pedidas vs Capacidad</strong></td>
+                          <td>97,5 de 100 visitas</td>
+                          <td>97,0 de 100 (con 840 leads)</td>
+                          <td><strong>100,0 de 100 (M1-2)</strong> -> 137,3 de 150</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Ventas cerradas al mes</strong></td>
+                          <td>22,32 instalaciones</td>
+                          <td><strong>17,46 instalaciones (-5 ventas)</strong></td>
+                          <td>27,08 (M1-2) -> <strong>35,34 (M3-24)</strong></td>
+                        </tr>
+                        <tr>
+                          <td><strong>CAC Real promedio</strong></td>
+                          <td>$620,62</td>
+                          <td>$791,43</td>
+                          <td><strong>$522,15</strong></td>
+                        </tr>
+                        <tr class="row-winner">
+                          <td><strong>LTV:CAC Real</strong></td>
+                          <td>2,62x</td>
+                          <td>2,05x (quiebra en Mes 4)</td>
+                          <td><strong>3,11x</strong></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div id="cp1-mano" class="subtab-pane">
+                  <div class="coq-info-card">
+                    <h4>Cuentas Verificadas a Mano</h4>
+                    <div class="hand-calc-list">
+                      <div class="hand-calc-row">
+                        <span>CAC Real Google ($4.000):</span>
+                        <code>($4.000 + 39,7375 × $60) ÷ 11,92125 = $6.384,25 ÷ 11,92125 = $535,53</code>
+                      </div>
+                      <div class="hand-calc-row">
+                        <span>CAC Real Meta ($4.000):</span>
+                        <code>($4.000 + 57,75 × $60) ÷ 10,395 = $7.465 ÷ 10,395 = $718,13</code>
+                      </div>
+                      <div class="hand-calc-row">
+                        <span>Valor Neto Visita Google vs Meta:</span>
+                        <code>G: (0,30 × $1.625) - $60 = $427,50 | M: (0,18 × $1.625) - $60 = $232,50</code>
+                      </div>
+                      <div class="hand-calc-row">
+                        <span>Flujo Mes de Firma por Venta:</span>
+                        <code>+$3.250 (50% cliente) - $3.575 (55% paneles) - $195 (3% com.) = -$520</code>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="display:flex; flex-direction:column; gap:0.7rem;">
+                <div class="coq-info-card trap-highlight">
+                  <h4>Radiografía Numérica de la Trampa de Leadly</h4>
+                  <ul>
+                    <li><strong>Lead 5x más barato, pero cliente $182,60 más caro:</strong> Meta exige 5,56 visitas de $60 por cada venta ($333,33 solo en visitas) mientras Google exige 3,33 visitas ($200 en visitas).</li>
+                    <li><strong>Tope físico de 100 visitas:</strong> Pasar los $4.000 de Google a Meta quita 39,7 visitas de Google (que dejan $427,50 cada una) para meter visitas de Meta (que dejan $232,50), bajando las ventas de 22,3 a 17,5 al mes.</li>
+                    <li><strong>Bache de -$520 en el mes de firma:</strong> El proveedor cobra el 55% de paneles al firmar mientras el cliente adelanta el 50%.</li>
+                  </ul>
+                </div>
+
+                <div class="coquette-oval-callout">
+                  <h4 style="font-family:var(--font-editorial); font-size:1.05rem; color:var(--coq-choco-deep); margin-bottom:0.25rem;">
+                    Jugada Maestra Ganadora (Ocupación 100,0% Exacta + 3er Técnico)
+                  </h4>
+                  <ul style="font-size:0.8rem; color:var(--coq-choco-deep); padding-left:1.1rem; line-height:1.42;">
+                    <li><strong>Etapa 1 (Meses 1 y 2 · $8.000 Google + $2.600 Meta con filtro):</strong> Con $8.000 en Google se generan 63,58 visitas premium. Para llenar exactamente las 36,42 visitas restantes de los 2 técnicos sin desperdiciar ni una sola visita ni pagar sueldo extra en los meses de bache de caja, se invierten <strong>$2.600 en Meta con filtro</strong> (<strong>100,0 de 100 visitas = 0 desperdicio</strong>).</li>
+                    <li><strong>Etapa 2 (Meses 3 a 24 · $8.000 Google + $6.000 Meta + 3er Técnico):</strong> En el Mes 3 entra el cobro del 50% final de las ventas y se activa el 3er técnico (150 visitas), cerrando el Mes 24 con <strong>$474.180 en el banco</strong> y <strong>832 techos instalados</strong>.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
           </div>
-        </div>
-
-        <div class="plan-pill-selector">
-          <button class="plan-pill-btn plan-btn-agendo active" data-plan="actual">Plan 1: Actual ($10,000 fijos)</button>
-          <button class="plan-pill-btn plan-btn-agendo" data-plan="valeria">Plan 2: Propuesta Valeria ($30,000 fijos)</button>
-          <button class="plan-pill-btn plan-btn-agendo" data-plan="conservative">Plan 3: Conservador ($5,000 fijos)</button>
-          <button class="plan-pill-btn plan-btn-agendo" data-plan="master">Plan 4: Plan Maestro ($12,000 + 20% Anual)</button>
-        </div>
-
-        <div class="chart-gallery-card" style="margin-bottom: 1.5rem;">
-          <div class="chart-header">
-            <div class="chart-title">Evolución del Saldo Bancario en 24 Meses</div>
-            <div class="chart-subtitle">Línea de caja vs piso de seguridad ($10,000)</div>
-          </div>
-          <div class="chart-canvas-wrapper large-wrapper">
-            <canvas id="chart-agendo-sim24m"></canvas>
-          </div>
-        </div>
-
-        <div class="table-responsive">
-          <table class="editorial-table">
-            <thead>
-              <tr>
-                <th>Mes</th>
-                <th>Inversión Ads</th>
-                <th>Trials</th>
-                <th>Vendedoras</th>
-                <th>Clientes Nuevos</th>
-                <th>Clientes Activos</th>
-                <th>Entradas</th>
-                <th>Salidas</th>
-                <th>Flujo Neto</th>
-                <th>Caja Final</th>
-                <th>Alerta</th>
-              </tr>
-            </thead>
-            <tbody id="tbody-agendo-24m">
-              <!-- Filas generadas dinámicamente -->
-            </tbody>
-          </table>
-        </div>
-
-        <div class="callout-box solution-box" style="margin-top: 1.5rem;">
-          <div class="callout-title">Pitch Ejecutivo de 2 Minutos (Presentación ante Ricardo Méndez)</div>
-          <blockquote style="font-style: italic; font-size: 0.92rem; color: var(--color-chocolate-deep); line-height: 1.6;">
-            «Ricardo, Agendo tiene un gran producto con 1,150 barberías que lo adoran y un NPS de 61. Pero si aprobamos la petición de Valeria de triplicar ads a $30,000, cerraremos la empresa en 14 meses.<br><br>
-            Su reporte tiene una trampa matemática: el CAC de $105 está enmascarado por 50 clientes orgánicos mensuales. El cliente de anuncios cuesta $180, y al triplicar la pauta los trials sufren rendimientos decrecientes, empujando el CAC marginal a $398 por cliente cuando el LTV es de solo $251. Estaríamos quemando $147 por cada cliente adicional.<br><br>
-            Nuestro plan: fijar ads en $12,000, mejorar el onboarding por WhatsApp para subir la conversión del trial al 18% y cobrar anual al 20% de los clientes. Con esto la caja nunca baja de $58,900 y cerramos los dos años con 2,174 barberías y más de $343,000 en el banco sin necesitar una sola ronda más de inversión.»
-          </blockquote>
         </div>
       </div>
+
+      <!-- CASO C · PARTE 2 -->
+      <div id="sol-part-2" class="part-panel">
+        <div class="coquette-slide-frame chocolate-slide">
+          <div class="doily-canvas">
+            <div class="slide-part-header">
+              <div class="slide-title-block">
+                <h3 class="slide-script-heading">Nivel 2 · El tablero de Sol de Casa</h3>
+                <span class="slide-subtitle-italic">Presupuesto por canal, tope de visitas técnicas y valor por visita en vivo</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:0.6rem;">
+                <span class="status-pill warn" id="sol-semaforo-ltv">LTV:CAC 2,62x</span>
+                <button class="btn-coq-reset" id="btn-sol-reset">Volver a datos del caso</button>
+              </div>
+            </div>
+
+            <div class="grid-4" style="margin-bottom: 0.75rem;">
+              <div class="cameo-metric-box">
+                <div class="m-label">CAC Real Google vs Meta</div>
+                <div class="m-val"><span id="sol-val-cacgoogle">$535,53</span> / <span id="sol-val-cacmeta">$718,13</span></div>
+                <div class="m-note">Valor visita: G <strong id="sol-val-valorg">$427,50</strong> | M <strong id="sol-val-valorm">$232,50</strong></div>
+              </div>
+              <div class="cameo-metric-box dark-plaque">
+                <div class="m-label">Uso de Capacidad Técnica</div>
+                <div class="m-val" id="sol-val-usocap">97,5% (97,5 / 100)</div>
+                <div class="m-note" id="sol-note-desborde">Sin visitas perdidas</div>
+              </div>
+              <div class="cameo-metric-box">
+                <div class="m-label">Ventas Totales del Mes</div>
+                <div class="m-val" id="sol-val-ventas">22,32 instalac.</div>
+                <div class="m-note">Prioridad operativa: Google primero</div>
+              </div>
+              <div class="cameo-metric-box">
+                <div class="m-label">LTV:CAC Promedio</div>
+                <div class="m-val" id="sol-val-ltvcac">2,62x</div>
+                <div class="m-note">LTV neto por venta: $1.625,00</div>
+              </div>
+            </div>
+
+            <div class="grid-lvl2-layout">
+              <div class="sliders-box">
+                <h4 style="font-family:var(--font-editorial); font-size:0.98rem; color:var(--coq-choco-deep); margin-bottom:0.45rem;">
+                  Controles de Sol de Casa
+                </h4>
+                <div class="sliders-grid-2col">
+                  <div class="slider-item full-span">
+                    <div class="slider-top-row">
+                      <span class="slider-name">Inversión en Google Ads ($0 a $8.000)</span>
+                      <span class="slider-val-pill" id="badge-sol-invgoogle">$4.000</span>
+                    </div>
+                    <input type="range" class="coq-range" id="slider-sol-invgoogle" min="0" max="8000" step="500" value="4000">
+                  </div>
+
+                  <div class="slider-item full-span">
+                    <div class="slider-top-row">
+                      <span class="slider-name">Inversión en Meta Ads ($0 a $10.000)</span>
+                      <span class="slider-val-pill" id="badge-sol-invmeta">$4.000</span>
+                    </div>
+                    <input type="range" class="coq-range" id="slider-sol-invmeta" min="0" max="10000" step="500" value="4000">
+                  </div>
+
+                  <div class="slider-item">
+                    <div class="slider-top-row">
+                      <span class="slider-name">Costo por visita ($)</span>
+                      <span class="slider-val-pill" id="badge-sol-visita">$60</span>
+                    </div>
+                    <input type="range" class="coq-range" id="slider-sol-visita" min="30" max="100" step="5" value="60">
+                  </div>
+
+                  <div class="slider-item">
+                    <div class="slider-top-row">
+                      <span class="slider-name">Capacidad técnicos</span>
+                      <span class="slider-val-pill" id="badge-sol-cap">100</span>
+                    </div>
+                    <select id="slider-sol-cap" style="width:100%; padding:0.25rem; border-radius:6px; border:1px solid var(--coq-pink-border); font-size:0.78rem;">
+                      <option value="100">2 Técnicos (100 visitas)</option>
+                      <option value="150">3 Técnicos (150 visitas)</option>
+                      <option value="200">4 Técnicos (200 visitas)</option>
+                    </select>
+                  </div>
+
+                  <div class="slider-item full-span">
+                    <label style="display:flex; align-items:center; gap:0.45rem; font-size:0.78rem; cursor:pointer; font-weight:600; color:var(--coq-choco-deep);">
+                      <input type="checkbox" id="chk-sol-filtro">
+                      <span>Activar filtro de 2 preguntas en Meta (casa propia + recibo >$80)</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="charts-grid-2x2">
+                <div class="chart-frame">
+                  <div class="chart-frame-head">
+                    <span class="chart-frame-title">1. La Trampa: CPL vs CAC Real</span>
+                    <span class="chart-frame-sub">Lead de $8 vs $40 frente a Cliente Cerrado</span>
+                  </div>
+                  <div class="canvas-box-sm">
+                    <canvas id="chart-sol-trap"></canvas>
+                  </div>
+                </div>
+
+                <div class="chart-frame">
+                  <div class="chart-frame-head">
+                    <span class="chart-frame-title">2. Embudo Comparado Meta vs Google</span>
+                    <span class="chart-frame-sub">Leads -> Contactados -> Visitas -> Ventas</span>
+                  </div>
+                  <div class="canvas-box-sm">
+                    <canvas id="chart-sol-funnel"></canvas>
+                  </div>
+                </div>
+
+                <div class="chart-frame">
+                  <div class="chart-frame-head">
+                    <span class="chart-frame-title">3. Demanda vs Capacidad de Visitas</span>
+                    <span class="chart-frame-sub">Tope físico de técnicos y visitas perdidas</span>
+                  </div>
+                  <div class="canvas-box-sm">
+                    <canvas id="chart-sol-capacity"></canvas>
+                  </div>
+                </div>
+
+                <div class="chart-frame">
+                  <div class="chart-frame-head">
+                    <span class="chart-frame-title">4. Curva de Caja de 1 Instalación</span>
+                    <span class="chart-frame-sub">Bache de -$520 en Mes 1 y cobro final en Mes 2</span>
+                  </div>
+                  <div class="canvas-box-sm">
+                    <canvas id="chart-sol-unitcash"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- CASO C · PARTE 3 (SIMULADOR 24 MESES EN TIEMPO REAL) -->
+      <div id="sol-part-3" class="part-panel">
+        <div class="coquette-slide-frame">
+          <div class="doily-canvas">
+
+            <div class="realtime-investor-bar">
+              <div class="rt-controls-row">
+                <div class="rt-input-group">
+                  <label class="rt-input-label" for="sol-rt-invg-num">Google Ads/mes:</label>
+                  <div class="rt-money-field">
+                    <span>$</span>
+                    <input type="number" id="sol-rt-invg-num" class="rt-number-input" min="0" max="8000" step="500" value="8000">
+                  </div>
+                  <input type="range" id="sol-rt-invg-slider" class="coq-range rt-slider-inline" min="0" max="8000" step="500" value="8000">
+
+                  <label class="rt-input-label" for="sol-rt-invm-num" style="margin-left:0.3rem;">Meta M1-M2:</label>
+                  <div class="rt-money-field">
+                    <span>$</span>
+                    <input type="number" id="sol-rt-invm-num" class="rt-number-input" min="0" max="10000" step="200" value="2600">
+                  </div>
+
+                  <label class="rt-input-label" for="sol-rt-invm2-num" style="margin-left:0.3rem;">Meta M3-M24:</label>
+                  <div class="rt-money-field">
+                    <span>$</span>
+                    <input type="number" id="sol-rt-invm2-num" class="rt-number-input" min="0" max="10000" step="200" value="6000">
+                  </div>
+                  <input type="range" id="sol-rt-invm-slider" class="coq-range rt-slider-inline" min="0" max="10000" step="200" value="6000">
+                </div>
+
+                <div class="rt-toggles-group">
+                  <label class="rt-check-chip">
+                    <input type="checkbox" id="sol-rt-tech3" checked>
+                    <span>3er Técnico en Mes 3 (150 visitas)</span>
+                  </label>
+                  <label class="rt-check-chip">
+                    <input type="checkbox" id="sol-rt-filter" checked>
+                    <span>Filtro de 2 preguntas en Meta</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="preset-plans-row">
+                <span class="preset-label">Cargar plan en tiempo real:</span>
+                <button class="preset-btn plan-btn-sol" data-plan="actual">Plan 1: Hoy ($4k Meta + $4k Google)</button>
+                <button class="preset-btn plan-btn-sol" data-plan="leadly">Plan 2: Leadly ($8k Meta + $0 Google)</button>
+                <button class="preset-btn plan-btn-sol" data-plan="googlemax">Plan 3: Propio Fijo ($8k G + $4k M + 3er Téc.)</button>
+                <button class="preset-btn plan-btn-sol winner-btn active" data-plan="master">Plan 4: Jugada Maestra Cupo 100% Exacto ($8k G + $2,6k->$6k M)</button>
+              </div>
+            </div>
+
+            <div id="sol-rt-verdict" class="verdict-live-banner good">
+              <div class="verdict-main-text">
+                <strong class="verdict-headline" id="sol-verdict-title">SÍ ES BUENO PARA INVERTIR — JUGADA MAESTRA DE OCUPACIÓN 100% EXACTA</strong>
+                <p class="verdict-explanation" id="sol-verdict-desc">
+                  Llena 100,0 de 100 visitas en M1-M2 sin desperdiciar pauta, contrata al 3er técnico en M3 y sube Meta a $6.000 para superar los $474.000 de caja.
+                </p>
+              </div>
+              <div class="verdict-kpis">
+                <div class="verdict-kpi-pill">
+                  <small>Caja Mínima</small>
+                  <strong id="sol-vkpi-min">$10.354 (M1)</strong>
+                </div>
+                <div class="verdict-kpi-pill">
+                  <small>Caja Mes 24</small>
+                  <strong id="sol-vkpi-final">$474.180</strong>
+                </div>
+                <div class="verdict-kpi-pill">
+                  <small>Instalaciones 24m</small>
+                  <strong id="sol-vkpi-subs">915 techos</strong>
+                </div>
+                <div class="verdict-kpi-pill">
+                  <small>Visitas M3-24</small>
+                  <strong id="sol-vkpi-cac">137,3 / 150</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-sim-layout">
+              <div class="chart-frame">
+                <div class="chart-frame-head">
+                  <span class="chart-frame-title">Gráfica en Tiempo Real: Saldo Bancario de Sol de Casa (Mes 0 al 24)</span>
+                  <span class="chart-frame-sub">Tu combinación en vivo frente a Hoy ($4k+$4k), Leadly ($8k Meta) y el Piso ($5.000)</span>
+                </div>
+                <div class="canvas-box-lg">
+                  <canvas id="chart-sol-sim24m"></canvas>
+                </div>
+              </div>
+
+              <div>
+                <div class="inner-subtabs" data-subtab-group="sol-p3">
+                  <button class="subtab-pill active" data-subpane="cp3-planes">Comparar 4 Planes</button>
+                  <button class="subtab-pill" data-subpane="cp3-tabla24">Tabla 24 Meses (En Vivo)</button>
+                  <button class="subtab-pill" data-subpane="cp3-mes1">Revisión Mes 1 ($4k+$4k)</button>
+                </div>
+
+                <div id="cp3-planes" class="subtab-pane active">
+                  <div class="table-box">
+                    <table class="coq-table">
+                      <thead>
+                        <tr>
+                          <th>Plan (24 Meses)</th>
+                          <th>Meta + Google</th>
+                          <th>Caja Mínima (Mes)</th>
+                          <th>Caja Mes 24</th>
+                          <th>Ventas 24m</th>
+                        </tr>
+                      </thead>
+                      <tbody id="tbody-sol-compare"></tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div id="cp3-tabla24" class="subtab-pane">
+                  <div class="table-box scroll-y">
+                    <table class="coq-table">
+                      <thead>
+                        <tr>
+                          <th>Mes</th>
+                          <th>Meta / GGL</th>
+                          <th>Visitas Ped.</th>
+                          <th>Cap.</th>
+                          <th>Hechas</th>
+                          <th>Ventas</th>
+                          <th>Entradas</th>
+                          <th>Salidas</th>
+                          <th>Caja Final</th>
+                        </tr>
+                      </thead>
+                      <tbody id="tbody-sol-24m"></tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div id="cp3-mes1" class="subtab-pane">
+                  <div class="coq-info-card">
+                    <h4>Revisión del Mes 1 a Mano (Plan Hoy: $4.000 Meta + $4.000 Google)</h4>
+                    <div class="hand-calc-list">
+                      <div class="hand-calc-row">
+                        <span>1. Visitas hechas Mes 1:</span>
+                        <code>39,74 (Google) + 57,75 (Meta) = 97,49 visitas (caben en 100)</code>
+                      </div>
+                      <div class="hand-calc-row">
+                        <span>2. Ventas cerradas Mes 1:</span>
+                        <code>(39,7375 × 30% = 11,921) + (57,75 × 18% = 10,395) = 22,316 ventas</code>
+                      </div>
+                      <div class="hand-calc-row">
+                        <span>3. Entradas de caja Mes 1:</span>
+                        <code>50% de 22,316 ($72.527,81) + 50% de las 22 de sep ($71.500) = $144.027,81</code>
+                      </div>
+                      <div class="hand-calc-row">
+                        <span>4. Salidas de caja Mes 1:</span>
+                        <code>Eq. ($79.780,60) + Com. ($4.351,67) + Inst. sep ($24.310) + Vis. ($5.849,25) + Ads ($8k) + Fijos ($18k) = $140.291,52</code>
+                      </div>
+                      <div class="hand-calc-row">
+                        <span>5. Caja final Mes 1:</span>
+                        <code>$12.000 + ($144.027,81 - $140.291,52) = $15.736,29 (+$3.736,29)</code>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
     </section>
 
+    <footer class="coq-footer">
+      Modelos Financieros Interactivos · Caso A: Tueste · Caso B: Agendo · Caso C: Sol de Casa
+    </footer>
 
-    <!-- ============================================================== -->
-    <!-- PESTAÑA 4: CASO C · SOL DE CASA (LEAD GEN)                     -->
-    <!-- ============================================================== -->
-    <section id="tab-soldecasa" class="tab-content brand-theme-soldecasa">
-      
-      <!-- NIVEL 1: CALCULADORA Y RECOMENDACIÓN -->
-      <div class="ornate-card">
-        <div class="ornate-card-header">
-          <div class="card-title-group">
-            <span class="level-badge level-1">Nivel 1 · Calculadora y Rigor Numérico</span>
-            <h2>Diagnóstico Estratégico y Auditoría de Unit Economics: Sol de Casa</h2>
-            <p>Auditoría de canales de venta y evaluación de la propuesta de la agencia Leadly</p>
-          </div>
-          <button class="btn-ornate-secondary" id="btn-sol-reset">Restablecer Datos Base</button>
-        </div>
+  </div>
 
-        <div class="grid-4" style="margin-bottom: 1.5rem;">
-          <div class="metric-cameo">
-            <div class="metric-label">CAC Real Google</div>
-            <div class="metric-value" id="sol-val-cacgoogle">$535.53</div>
-            <div class="metric-subtext">Pauta + Visitas / Ventas GGL</div>
-          </div>
-          <div class="metric-cameo">
-            <div class="metric-label">CAC Real Meta</div>
-            <div class="metric-value" id="sol-val-cacmeta">$718.13</div>
-            <div class="metric-subtext">Pauta + Visitas / Ventas Meta</div>
-          </div>
-          <div class="metric-cameo">
-            <div class="metric-label">Valor Visita Google</div>
-            <div class="metric-value" id="sol-val-valorg">$427.50</div>
-            <div class="metric-subtext">(30% × $1,625) - $60 visita</div>
-          </div>
-          <div class="metric-cameo">
-            <div class="metric-label">Valor Visita Meta</div>
-            <div class="metric-value" id="sol-val-valorm">$232.50</div>
-            <div class="metric-subtext">(18% × $1,625) - $60 visita</div>
-          </div>
-        </div>
-
-        <div class="callout-box solution-box">
-          <div class="callout-title">Recomendación Ejecutiva de Una Página: Rechazar Tajantemente a Leadly</div>
-          <p style="font-size: 0.92rem; color: var(--color-chocolate-deep); margin-bottom: 0.5rem;">
-            <strong>Diagnóstico de la trampa:</strong> Leadly promete duplicar ventas mudando todo el presupuesto a Meta porque el lead cuesta $8 frente a los $40 de Google. 
-            Sin embargo, <strong>el CAC Real de Meta es $718.13 frente a $535.53 de Google</strong> (Google es 25.4% más barato por cliente instalado). 
-            Meta satura el embudo con teléfonos falsos (18%) y requiere 5.56 visitas por venta frente a 3.33 en Google. 
-            Además, el tope físico del equipo técnico es de 100 visitas al mes: 1,000 leads demandarían 115 visitas, desbordando la capacidad y perdiendo ventas. Pasar a Meta llevaría a Sol de Casa a perder -$60,897 de caja en 24 meses.
-          </p>
-          <p style="font-size: 0.92rem; color: var(--color-chocolate-deep);">
-            <strong>Nuestra Solución Maestra:</strong> 1) Mantener y maxear Google Ads a $8,000 mensuales. 2) Contratar un 3er técnico ($1,800/mes) en el Mes 3 para elevar capacidad a 150 visitas. 
-            3) Activar en Meta el filtro de 2 preguntas (casa propia y recibo >$80). 
-            Resultado: <strong>+$442,639 en banco al Mes 24 con 881 instalaciones acumuladas</strong>.
-          </p>
-        </div>
-
-        <!-- Fila Verificada a Mano: Revisión Mes 1 Plan Actual -->
-        <div class="hand-verified-card">
-          <h4 style="font-family: var(--font-serif); margin-bottom: 0.75rem;">Fila Verificada a Mano: Revisión del Mes 1 ($4k Meta + $4k Google)</h4>
-          <div class="step-math-row">
-            <span>1. Visitas Demandadas:</span>
-            <span class="math-formula">Google (39.74) + Meta (57.75) = 97.49 visitas (Cabe en 100)</span>
-          </div>
-          <div class="step-math-row">
-            <span>2. Ventas Totales Mes 1:</span>
-            <span class="math-formula">Google (39.74 × 0.30 = 11.92) + Meta (57.75 × 0.18 = 10.40) = 22.32 ventas</span>
-          </div>
-          <div class="step-math-row">
-            <span>3. Entradas de Caja Mes 1:</span>
-            <span class="math-formula">(50% × $6,500 × 22.32) + (50% × $6,500 × 22 de Sep) = $72,528 + $71,500 = $144,028.00</span>
-          </div>
-          <div class="step-math-row">
-            <span>4. Salidas de Caja Mes 1:</span>
-            <span class="math-formula">Equipos ($79,781) + Comis ($4,352) + Inst Sep ($24,310) + Visitas ($5,849) + Ads ($8k) + Fijos ($18k) = $140,292.00</span>
-          </div>
-          <div class="step-math-row">
-            <span>5. Flujo Neto y Caja Final Mes 1:</span>
-            <span class="math-formula">Flujo: +$3,736.00 | Caja Final: $12,000 + $3,736 = $15,736.00</span>
-          </div>
-        </div>
-
-        <div class="callout-box" style="margin-top: 1rem; border-left-color: var(--color-chocolate-milk);">
-          <strong style="font-size: 0.88rem; color: var(--color-chocolate-deep);">En qué se equivocó o nos confundió la IA:</strong>
-          <p style="font-size: 0.84rem; color: var(--color-text-secondary); margin-top: 0.25rem;">
-            La IA recomendó migrar a Meta calculando el CAC de anuncios únicamente con la pauta ($384 vs $335), sin incluir los $60 que cuesta cada visita técnica realizada. 
-            Al ignorar que Meta requiere un 67% más de visitas por venta que Google, la IA no detectó que cada cliente de Meta cuesta $182.60 más en la operación real.
-          </p>
-        </div>
-      </div>
-
-      <!-- NIVEL 2: TABLERO INTERACTIVO EN VIVO -->
-      <div class="ornate-card">
-        <div class="ornate-card-header">
-          <div class="card-title-group">
-            <span class="level-badge level-2">Nivel 2 · Tablero Interactivo en Vivo</span>
-            <h2>Controles de Simulación y Visualización de la Trampa: Sol de Casa</h2>
-            <p>Ajuste el presupuesto por canal y la capacidad para observar la asignación óptima de visitas</p>
-          </div>
-          <div style="display: flex; gap: 0.75rem; align-items: center;">
-            <span class="badge-status" id="sol-semaforo-ltv">LTV:CAC</span>
-          </div>
-        </div>
-
-        <div id="sol-alerta-capacidad" class="callout-box trap-box" style="display: none; margin-bottom: 1.5rem;">
-          <!-- Mensaje dinámico de desborde -->
-        </div>
-
-        <div class="grid-2">
-          <div class="control-panel">
-            <h4 style="font-family: var(--font-serif); margin-bottom: 1rem; font-size: 1.05rem;">Parámetros Editables de Sol de Casa</h4>
-            
-            <div class="control-group">
-              <div class="control-label-row">
-                <span class="control-label">Inversión en Meta Ads:</span>
-                <span class="control-value-badge" id="badge-sol-invmeta">$4,000</span>
-              </div>
-              <input type="range" class="ornate-slider" id="slider-sol-invmeta" min="0" max="10000" step="1000" value="4000">
-            </div>
-
-            <div class="control-group">
-              <div class="control-label-row">
-                <span class="control-label">Inversión en Google Ads:</span>
-                <span class="control-value-badge" id="badge-sol-invgoogle">$4,000</span>
-              </div>
-              <input type="range" class="ornate-slider" id="slider-sol-invgoogle" min="0" max="8000" step="1000" value="4000">
-            </div>
-
-            <div class="control-group">
-              <div class="control-label-row">
-                <span class="control-label">Capacidad de Visitas Técnicas:</span>
-                <span class="control-value-badge" id="badge-sol-cap">100 visitas/mes</span>
-              </div>
-              <select id="slider-sol-cap" style="width: 100%; padding: 0.5rem; border-radius: 6px; border: 1.5px solid var(--color-border-lace); font-family: var(--font-sans);">
-                <option value="100">100 Visitas / Mes (2 Técnicos Base)</option>
-                <option value="150">150 Visitas / Mes (+1 Técnico Extra: $1,800/mes)</option>
-                <option value="200">200 Visitas / Mes (+2 Técnicos Extra: $3,600/mes)</option>
-              </select>
-            </div>
-
-            <div class="control-group" style="margin-top: 1rem;">
-              <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.88rem; cursor: pointer;">
-                <input type="checkbox" id="chk-sol-filtro" style="width: 18px; height: 18px;">
-                <strong>Activar Filtro Calidad Meta (Supuesto 7: Casa Propia + Recibo >$80)</strong>
-              </label>
-            </div>
-          </div>
-
-          <!-- Métricas en Vivo -->
-          <div class="grid-2">
-            <div class="metric-cameo">
-              <div class="metric-label">Ventas Totales Mes</div>
-              <div class="metric-value" id="sol-val-ventas">22.3 instalac.</div>
-              <div class="metric-subtext">Cierres firmados en el mes</div>
-            </div>
-            <div class="metric-cameo">
-              <div class="metric-label">Uso de Capacidad</div>
-              <div class="metric-value" id="sol-val-usocap">97.5%</div>
-              <div class="metric-subtext">Visitas técnicas realizadas</div>
-            </div>
-            <div class="metric-cameo">
-              <div class="metric-label">Ratio LTV : CAC Blended</div>
-              <div class="metric-value" id="sol-val-ltvcac">2.62x</div>
-              <div class="metric-subtext">Google (3.03x) vs Meta (2.26x)</div>
-            </div>
-            <div class="metric-cameo">
-              <div class="metric-label">Déficit Inicial por Firma</div>
-              <div class="metric-value" style="color: #991b1b;">-$520.00</div>
-              <div class="metric-subtext">Equipos (55%) + Comisión (3%)</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Galería de Gráficos Nivel 2 -->
-        <div class="grid-3" style="margin-top: 1.5rem;">
-          <div class="chart-gallery-card">
-            <div class="chart-header">
-              <div class="chart-title">La Trampa de Leadly</div>
-              <div class="chart-subtitle">CPL ($8 vs $40) vs CAC Real ($718 vs $535)</div>
-            </div>
-            <div class="chart-canvas-wrapper">
-              <canvas id="chart-sol-trap"></canvas>
-            </div>
-          </div>
-
-          <div class="chart-gallery-card">
-            <div class="chart-header">
-              <div class="chart-title">Embudo Comparado por Canal</div>
-              <div class="chart-subtitle">De Leads a Ventas Finales</div>
-            </div>
-            <div class="chart-canvas-wrapper">
-              <canvas id="chart-sol-funnel"></canvas>
-            </div>
-          </div>
-
-          <div class="chart-gallery-card">
-            <div class="chart-header">
-              <div class="chart-title">Demanda vs Capacidad de Visitas</div>
-              <div class="chart-subtitle">Prioridad Google y tope físico de 100</div>
-            </div>
-            <div class="chart-canvas-wrapper">
-              <canvas id="chart-sol-capacity"></canvas>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- NIVEL 3: SIMULADOR DE CAJA DE 24 MESES -->
-      <div class="ornate-card">
-        <div class="ornate-card-header">
-          <div class="card-title-group">
-            <span class="level-badge level-3">Nivel 3 · Simulador de Tesorería a 24 Meses</span>
-            <h2>Proyección Financiera y Trayectoria de Caja: Sol de Casa</h2>
-            <p>Seleccione un plan para ver la evolución mes a mes frente al piso de seguridad ($5,000)</p>
-          </div>
-        </div>
-
-        <div class="plan-pill-selector">
-          <button class="plan-pill-btn plan-btn-sol active" data-plan="actual">Plan 1: Actual ($4k Meta + $4k Google)</button>
-          <button class="plan-pill-btn plan-btn-sol" data-plan="leadly">Plan 2: Propuesta Leadly ($8k Meta + $0 Google)</button>
-          <button class="plan-pill-btn plan-btn-sol" data-plan="googlemax">Plan 3: Google Max ($2k Meta + $8k Google)</button>
-          <button class="plan-pill-btn plan-btn-sol" data-plan="master">Plan 4: Plan Maestro (3er Técnico + Filtro)</button>
-        </div>
-
-        <div class="chart-gallery-card" style="margin-bottom: 1.5rem;">
-          <div class="chart-header">
-            <div class="chart-title">Evolución del Saldo Bancario en 24 Meses</div>
-            <div class="chart-subtitle">Línea de caja vs piso de seguridad ($5,000)</div>
-          </div>
-          <div class="chart-canvas-wrapper large-wrapper">
-            <canvas id="chart-sol-sim24m"></canvas>
-          </div>
-        </div>
-
-        <div class="table-responsive">
-          <table class="editorial-table">
-            <thead>
-              <tr>
-                <th>Mes</th>
-                <th>Inversión (Meta / GGL)</th>
-                <th>Visitas Pedidas</th>
-                <th>Capacidad</th>
-                <th>Visitas Hechas</th>
-                <th>Ventas</th>
-                <th>Entradas</th>
-                <th>Salidas</th>
-                <th>Flujo Neto</th>
-                <th>Caja Final</th>
-                <th>Alerta</th>
-              </tr>
-            </thead>
-            <tbody id="tbody-sol-24m">
-              <!-- Filas generadas dinámicamente -->
-            </tbody>
-          </table>
-        </div>
-
-        <div class="callout-box solution-box" style="margin-top: 1.5rem;">
-          <div class="callout-title">Pitch Ejecutivo de 2 Minutos (Presentación ante el Comité del Banco)</div>
-          <blockquote style="font-style: italic; font-size: 0.92rem; color: var(--color-chocolate-deep); line-height: 1.6;">
-            «Estimado comité bancario: Sol de Casa es líder en techos solares con 420 instalaciones y 4.9 estrellas. Nuestra agencia nos recomendó pasar todo a Meta prometiendo duplicar ventas con leads de $8. Hemos demostrado que esa recomendación nos llevaría a la quiebra: Google tiene un lead de $40 pero cierra al 30%, resultando en un CAC Real de $535 frente a los $718 de Meta. Google es 25% más barato en el mundo real.<br><br>
-            Solicitamos la línea de crédito de capital de trabajo de $25,000 para cubrir el desfase del mes de firma (el proveedor de paneles cobra el 55% de inmediato mientras el cliente adelanta el 50%) y contratar un tercer técnico que amplía nuestra capacidad a 150 visitas al mes. Con esto pasamos de 22 a 36 instalaciones mensuales, generamos más de $440,000 de tesorería acumulada en dos años y mantenemos un ratio de cobertura de deuda superior a 15 a 1.»
-          </blockquote>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ============================================================== -->
-    <!-- PESTAÑA 5: RÚBRICA Y AUDITORÍA DE 125 PUNTOS                   -->
-    <!-- ============================================================== -->
-    <section id="tab-rubrica" class="tab-content">
-      <div class="ornate-card">
-        <div class="ornate-card-header">
-          <div class="card-title-group">
-            <span class="level-badge level-1">Auditoría Oficial</span>
-            <h2>Cumplimiento Exhaustivo de la Rúbrica: 100 Puntos + 25 Bonus</h2>
-            <p>Verificación cruzada de criterios de negocio, fórmulas matemáticas y entregables del facilitador</p>
-          </div>
-          <span class="badge-status good">Calificación Máxima: 125/125</span>
-        </div>
-
-        <div class="table-responsive">
-          <table class="editorial-table">
-            <thead>
-              <tr>
-                <th>Criterio de Evaluación</th>
-                <th>Puntos</th>
-                <th>Evidencia en esta Solución Unificada</th>
-                <th>Estado</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Rigor Numérico</strong></td>
-                <td>25 Pts</td>
-                <td>Fórmulas exactas en Google Sheets (pestañas Supuestos y Resultados), fila verificada a mano en cada caso y cálculos sin inconsistencias.</td>
-                <td><span class="badge-status good">Verificado 25/25</span></td>
-              </tr>
-              <tr>
-                <td><strong>Criterio de Negocio</strong></td>
-                <td>30 Pts</td>
-                <td>Las tres trampas descubiertas con números exactos: Retargeting en Tueste, CAC Blended en Agendo, y Visitas de $60 con capacidad técnica en Sol de Casa.</td>
-                <td><span class="badge-status good">Verificado 30/30</span></td>
-              </tr>
-              <tr>
-                <td><strong>Uso de la IA y Corrección</strong></td>
-                <td>15 Pts</td>
-                <td>Sección obligatoria redactada en los tres casos documentando qué dijo la IA, por qué estaba equivocada y la fórmula correcta utilizada.</td>
-                <td><span class="badge-status good">Verificado 15/15</span></td>
-              </tr>
-              <tr>
-                <td><strong>Claridad y Pitch de 2 Min</strong></td>
-                <td>20 Pts</td>
-                <td>Pitches ejecutivos estructurados para Diego (tío prestamista), Ricardo (inversionista) y Andrés (comité del banco), defendibles sin pantalla.</td>
-                <td><span class="badge-status good">Verificado 20/20</span></td>
-              </tr>
-              <tr>
-                <td><strong>Excelencia Visual Artesanal</strong></td>
-                <td>10 Pts</td>
-                <td>Estética inspirada en la plantilla adjunta: marcos ornamentales, tipografía editorial (Cinzel/Fraunces), acabados de imprenta, cero emojis.</td>
-                <td><span class="badge-status good">Verificado 10/10</span></td>
-              </tr>
-              <tr class="highlight-winner">
-                <td><strong>Bonus Nivel 2: Tablero Web Interactivo</strong></td>
-                <td>+10 Pts</td>
-                <td>Sliders reactivos, semáforos dinámicos, alerta de capacidad y gráficos interactivos con botón para restablecer a datos base (<1% diferencia).</td>
-                <td><span class="badge-status good">Obtenido +10</span></td>
-              </tr>
-              <tr class="highlight-winner">
-                <td><strong>Bonus Nivel 3: Simulador 24 Meses + Mejor Plan</strong></td>
-                <td>+15 Pts + 5 Pts</td>
-                <td>Tablas completas de 24 meses mes a mes, revisión manual del Mes 1 cuadrando con el modelo de referencia, comparativa de 4 planes y regla del piso.</td>
-                <td><span class="badge-status good">Obtenido +20</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="master-footer">
-    <p>Valmont Strategic Advisory &bull; Boutique de Inteligencia Financiera &amp; Unit Economics</p>
-    <p style="margin-top: 0.35rem;">Repositorio oficial en GitHub: <a href="https://github.com/krishna7867s/solucion-de-negocio.git" target="_blank">github.com/krishna7867s/solucion-de-negocio</a></p>
-  </footer>
-
-  <!-- Scripts de la Aplicación -->
   <script src="js/charts-engine.js"></script>
   <script src="js/caso-a-tueste.js"></script>
   <script src="js/caso-b-agendo.js"></script>
