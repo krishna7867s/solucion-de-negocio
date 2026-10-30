@@ -1,0 +1,109 @@
+{
+  "name": "Sol de Casa - Filtro de Calificación Pre-Visita & Alerta de Capacidad",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "soldecasa/nuevo-lead",
+        "options": {}
+      },
+      "id": "1",
+      "name": "Webhook Formulario Lead",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "functionCode": "// Valida las dos preguntas del Supuesto 7\nconst body = items[0].json.body;\nconst esPropietario = body.es_propietario === true || body.es_propietario === 'si';\nconst reciboLuz = parseFloat(body.monto_recibo_luz || 0);\nconst telefonoValido = body.telefono && body.telefono.length >= 8;\n\nconst calificadoParaVisita = esPropietario && reciboLuz >= 80.0 && telefonoValido;\n\nreturn [{\n  json: {\n    nombre: body.nombre,\n    telefono: body.telefono,\n    canal: body.canal || 'META',\n    es_propietario: esPropietario,\n    monto_recibo_luz: reciboLuz,\n    calificado: calificadoParaVisita\n  }\n}];"
+      },
+      "id": "2",
+      "name": "Filtro Calidad (Supuesto 7)",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{$json[\"calificado\"]}}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "3",
+      "name": "¿Califica para Visita $60?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT COUNT(*) as visitas_agendadas FROM capacidad_operativa WHERE empresa_id = 'soldecasa' AND mes_periodo = DATE_TRUNC('month', CURRENT_DATE);"
+      },
+      "id": "4",
+      "name": "Verificar Cupo de Técnicos (Tope 100)",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 1,
+      "position": [920, 200]
+    },
+    {
+      "parameters": {
+        "sendTo": "={{$node[\"Webhook Formulario Lead\"].json[\"body\"][\"email\"]}}",
+        "subject": "Información sobre Paneles Solares Sol de Casa",
+        "message": "Hola {{$json[\"nombre\"]}}, gracias por tu interés. Para instalaciones de menor escala compartimos nuestra guía técnica informativa."
+      },
+      "id": "5",
+      "name": "Nurturing Automático (Ahorro Visita $60)",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 1,
+      "position": [920, 420]
+    }
+  ],
+  "connections": {
+    "Webhook Formulario Lead": {
+      "main": [
+        [
+          {
+            "node": "Filtro Calidad (Supuesto 7)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filtro Calidad (Supuesto 7)": {
+      "main": [
+        [
+          {
+            "node": "¿Califica para Visita $60?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "¿Califica para Visita $60?": {
+      "main": [
+        [
+          {
+            "node": "Verificar Cupo de Técnicos (Tope 100)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Nurturing Automático (Ahorro Visita $60)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

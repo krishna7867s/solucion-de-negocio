@@ -1,0 +1,108 @@
+{
+  "name": "Tueste - Atribución Limpia Shopify & Control de ROAS Real",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "tueste/orden-creada",
+        "options": {}
+      },
+      "id": "1",
+      "name": "Webhook Shopify Orden",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "functionCode": "// Discrimina entre cliente nuevo y cliente recurrente (Retargeting)\nconst body = items[0].json.body;\nconst customerOrdersCount = body.customer ? body.customer.orders_count : 1;\nconst isNewCustomer = customerOrdersCount <= 1;\nconst utmSource = body.note_attributes ? (body.note_attributes.find(a => a.name === 'utm_source') || {}).value : 'directo';\n\nreturn [{\n  json: {\n    order_id: body.id,\n    customer_email: body.email,\n    total_price: parseFloat(body.total_price || 34.00),\n    is_new_customer: isNewCustomer,\n    utm_source: utmSource,\n    channel_clean: isNewCustomer && utmSource && utmSource.includes('meta') ? 'META_ACQUISITION' : (isNewCustomer ? 'ORGANIC' : 'REPEAT_BUYER_RETARGETING')\n  }\n}];"
+      },
+      "id": "2",
+      "name": "Filtro Atribución Limpia",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{$json[\"is_new_customer\"]}}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "3",
+      "name": "¿Es Cliente Nuevo?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO transacciones_ingresos (empresa_id, monto_bruto, monto_costo_directo, monto_margen_contribucion, numero_pedido_o_hito, estado_pago, fecha_transaccion)\nVALUES ('tueste', {{$json[\"total_price\"]}}, 18.11, {{$json[\"total_price\"]}} - 18.11, 1, 'COBRADO', CURRENT_DATE);"
+      },
+      "id": "4",
+      "name": "Registrar en Base de Datos Postgres",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 1,
+      "position": [920, 200]
+    },
+    {
+      "parameters": {
+        "channel": "#alertas-tueste-roas",
+        "text": "=⚠️ Compra de cliente recurrente atribuida a retargeting: ${{$json[\"total_price\"]}}. No computar para CAC de captación."
+      },
+      "id": "5",
+      "name": "Alerta Atribución Falsa Meta",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 1,
+      "position": [920, 420]
+    }
+  ],
+  "connections": {
+    "Webhook Shopify Orden": {
+      "main": [
+        [
+          {
+            "node": "Filtro Atribución Limpia",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filtro Atribución Limpia": {
+      "main": [
+        [
+          {
+            "node": "¿Es Cliente Nuevo?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "¿Es Cliente Nuevo?": {
+      "main": [
+        [
+          {
+            "node": "Registrar en Base de Datos Postgres",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Alerta Atribución Falsa Meta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

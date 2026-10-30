@@ -1,0 +1,110 @@
+{
+  "name": "Agendo - Contacto en <5min y Balanceo de Carga de Mariela",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "agendo/nuevo-trial",
+        "options": {}
+      },
+      "id": "1",
+      "name": "Webhook Registro Trial",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT COUNT(*) as trials_mes FROM clientes WHERE empresa_id = 'agendo' AND fecha_captacion >= DATE_TRUNC('month', CURRENT_DATE);"
+      },
+      "id": "2",
+      "name": "Consultar Capacidad Mariela",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 1,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{parseInt($json[\"trials_mes\"])}}",
+              "operation": "larger",
+              "value2": 500
+            }
+          ]
+        }
+      },
+      "id": "3",
+      "name": "¿Desborde de 500 Trials?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "phoneNumber": "={{$node[\"Webhook Registro Trial\"].json[\"body\"][\"telefono\"]}}",
+        "message": "=¡Hola! Bienvenido a Agendo. Soy Mariela, tu asesora de puesta en marcha. Ya dejamos tu enlace de reservas activo para que tus clientes no fallen a sus citas de corte. ¿Te parece si agendamos 10 minutos para dejar listos tus cobros por WhatsApp?"
+      },
+      "id": "4",
+      "name": "WhatsApp Inmediato (<5 min)",
+      "type": "n8n-nodes-base.whatsapp",
+      "typeVersion": 1,
+      "position": [920, 200]
+    },
+    {
+      "parameters": {
+        "channel": "#alertas-operaciones-agendo",
+        "text": "=🚨 ALERTA CAPACIDAD AGENDO: Se han superado los 500 trials mensuales (Actual: {{$json[\"trials_mes\"]}}). Se requiere activar la segunda vendedora inmediatamente para evitar caída en conversión de prueba a pago."
+      },
+      "id": "5",
+      "name": "Alerta Contratación Vendedora 2",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 1,
+      "position": [920, 420]
+    }
+  ],
+  "connections": {
+    "Webhook Registro Trial": {
+      "main": [
+        [
+          {
+            "node": "Consultar Capacidad Mariela",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Consultar Capacidad Mariela": {
+      "main": [
+        [
+          {
+            "node": "¿Desborde de 500 Trials?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "¿Desborde de 500 Trials?": {
+      "main": [
+        [
+          {
+            "node": "Alerta Contratación Vendedora 2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "WhatsApp Inmediato (<5 min)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
