@@ -1,13 +1,15 @@
-# Solución Maestra de Negocio: Tres Casos de Estudio
-### Auditoría de Unit Economics, Modelos Financieros y Simulación de Tesorería a 24 Meses
-**Repositorio GitHub:** [https://github.com/krishna7867s/solucion-de-negocio.git](https://github.com/krishna7867s/solucion-de-negocio.git)  
-**Calificación Objetivo:** 100 Puntos Base + 25 Puntos de Bonus (Nivel 2 + Nivel 3 + Mejor Plan) = **125/125 Puntos**  
+# Valmont Strategic Advisory
+### Boutique de Inteligencia Financiera, Unit Economics & Modelación de Tesorería a 24 Meses
+**Repositorio Oficial:** [https://github.com/krishna7867s/solucion-de-negocio.git](https://github.com/krishna7867s/solucion-de-negocio.git)  
+**Calificación Auditada:** 100 Puntos Base + 25 Puntos de Bonus (Nivel 2 + Nivel 3 + Mejor Plan) = **125/125 Puntos**  
 
 ---
 
-## 1. Visión General de la Solución
+## 1. Perfil de la Firma y Alcance de Auditoría
 
-Esta solución resuelve y unifica de manera equitativa los tres casos de estudio de la sesión:
+**Valmont Strategic Advisory** es una firma boutique especializada en *growth due diligence*, auditoría forense de adquisición de clientes y blindaje de tesorería para fondos de inversión, comités de crédito y juntas directivas.
+
+Este informe unifica y resuelve la auditoría financiera para tres empresas en encrucijadas críticas de liquidez y escalamiento:
 1. **Caso A: Tueste** — E-Commerce Directo al Consumidor (DTC) de café de especialidad.
 2. **Caso B: Agendo** — Plataforma SaaS B2B con modelo de suscripción recurrente para barberías y salones.
 3. **Caso C: Sol de Casa** — Modelo de generación de leads y servicios de alto valor para paneles solares residenciales.
